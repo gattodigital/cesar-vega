@@ -1,0 +1,43 @@
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>gems | One Page</title>
+    <!-- Plugins CSS -->
+    <link href="./assets/html/css/plugins/plugins.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link href="./assets/html/css/style.css" rel="stylesheet">
+</head>
+
+<div class='testimonials bg-parllax parallax-overlay sectionDark pt90 pb60' data-jarallax='{"speed": 0.2}' [style.background]="'url('+sectionTwelveImage+')'">
+    <div class='container'>
+        <div class="row">
+            <div class="col-md-8 col-lg-6 offset-md-2 offset-lg-3">
+                <div class="section-title">
+                    <h4>{{sectionTwelveTitle}}</h4>
+                    <p class="lead">{{sectionTwelveDescription}}</p>
+                </div>
+            </div>
+        </div>
+        <!--/section title-->
+
+        <div class='owl-feedback owl-carousel owl-theme'>
+            <div class='item'>
+                <div *ngFor="let item of sectionTwelveCards" class='row align-items-center'>
+                    <div class='col-md-2 offset-md-1'>
+                        <img [src]='item.image' alt='' class='rounded-circle img-fluid' width='120'>
+                    </div>
+                    <div class='col-md-8'>
+                        <p class='lead'>
+                            {{item.paragraph}}
+                        </p>
+                        <h4 class="text-uppercase mb5">{{item.title}}</h4>
+                        <em>{{item.footerDescription}}</em>
+                    </div>
+                </div>
+            </div>
+            <!--/item-->
+        </div>
+    </div>
+</div>
+<!--/ Testimonials-->

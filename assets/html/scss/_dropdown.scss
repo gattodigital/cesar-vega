@@ -1,0 +1,14 @@
+/*
+Dropdown menu
+*/
+.dropdown-menu{
+   a.dropdown-item{
+        text-transform: capitalize;
+        font-size:.9rem;
+        &:hover,&:focus{
+            background: transparent;
+            color: $primary-color;
+        }
+    }
+}
+

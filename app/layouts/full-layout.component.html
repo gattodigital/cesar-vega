@@ -1,0 +1,22 @@
+<div class="app-body" [hidden]="hideBody" >
+<header-detail [hidden]="hideHeader"></header-detail>
+    <left-menu-detail [hidden]="hideLeftMenu">wwwwww</left-menu-detail>
+    <!-- Main content -->
+    <main class="main">
+        <!-- Breadcrumb -->
+        <ol class="breadcrumb mb-0">
+            <breadcrumbs></breadcrumbs>
+        </ol>
+        <div class="container-fluid" >
+            <router-outlet ></router-outlet>
+        </div>
+        <!-- /.conainer-fluid -->
+    </main>
+    <right-menu-detail [hidden]="hideRightMenu"></right-menu-detail>
+</div>
+<footer class="app-footer" [hidden]="hideFooter">
+    <a href="https://brandinstitute.com">BI</a> &copy; 2017 Brand Institute.
+    <span class="float-right">
+        Powered by <a href="https://brandinstitute.com">IS TEAM</a>
+    </span>
+</footer>

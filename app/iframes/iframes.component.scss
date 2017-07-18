@@ -1,0 +1,48 @@
+/*CENTERING WRAPPER*/
+.wrapper {
+       width: 317px;
+    height: 215px;
+    position: absolute;
+    left: 50%;
+    top: 100px;
+    margin-left: -159px;
+    margin-top: -108px;
+}
+
+/*WINDOW*/
+.window {
+    width: 317px;
+    height: 215px;
+    border: 1px solid #8C8D8E;
+    border-radius: 5px;
+    background-color: #fff;
+
+    -webkit-box-shadow: 0 1px 3px 0px rgba(5, 10, 15, 0.15);
+    box-shadow: 0 1px 3px 0px rgba(5, 10, 15, 0.15);
+}
+
+.window .container {
+    width: 317px;
+    height: 181px;
+    border: none;
+    margin:0;
+    padding:0;
+    overflow:hidden;
+}
+
+
+
+#frame {
+    width: 1583px;
+    height: 905px;
+    border: none;
+    margin:0;
+    padding:0;
+    -moz-transform: scale(0.2);
+    -moz-transform-origin: 0 0;
+    -o-transform: scale(0.2);
+    -o-transform-origin: 0 0;
+    -webkit-transform: scale(0.2);
+    -webkit-transform-origin: 0 0;
+    border-radius:0 0 26px 26px;
+}

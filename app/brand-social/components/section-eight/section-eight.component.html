@@ -1,0 +1,47 @@
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>gems | One Page</title>
+    <!-- Plugins CSS -->
+    <link href="./assets/html/css/plugins/plugins.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link href="./assets/html/css/style.css" rel="stylesheet">
+</head>
+
+
+<div class="pt90 pb60">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8 col-lg-6 offset-md-2 offset-lg-3">
+                <div class="section-title">
+                    <h4>{{sectionEightTitle}}</h4>
+                    <p class="lead">{{sectionEightDescription}}</p>
+                </div>
+            </div>
+        </div>
+        <!--/section title-->
+        <div class="row">
+            <div *ngFor="let item of sectionEightCards" class="col-sm-6 col-md-4 col-lg-3 mb30">
+                <div class="person-card wow fadeIn" data-wow-duration=".2s" data-wow-delay=".1s">
+                    <div class="person-thumb">
+                        <img src="./assets/html/images/team-1.jpg" alt="" class="img-fluid">
+                        <ul class="list-inline">
+                            <li *ngFor="let buttonIcon of item.footerButtons" class="list-inline-item">
+                                <a href="#">
+                                    <i [class]="buttonIcon.icon"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="person-content">
+                        <h4 class="text-uppercase mb0">{{item.title}}</h4>
+                        <span>{{item.paragraph}}</span>
+                    </div>
+                </div>
+                <!--/person card-->
+            </div>
+            <!--/col-->
+        </div>
+    </div>
+</div>

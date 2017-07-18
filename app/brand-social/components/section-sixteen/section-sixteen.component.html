@@ -1,0 +1,26 @@
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>gems | One Page</title>
+    <!-- Plugins CSS -->
+    <link href="./assets/html/css/plugins/plugins.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link href="./assets/html/css/style.css" rel="stylesheet">
+</head>
+
+<footer id="footer" class="footer  pt90 pb90">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <ul class="list-inline">
+                    <li *ngFor="let item of sectionSixteenCards" class="list-inline-item">
+                        <a href="#"><i [class]="item.icon"></i></a>
+                    </li>
+                </ul>
+                <span>&copy; {{sectionSixteenDescription}}</span>
+            </div>
+        </div>
+    </div>
+</footer>
+<!--back to top-->

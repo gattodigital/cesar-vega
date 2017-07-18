@@ -1,0 +1,43 @@
+<div class="sidebar">
+
+
+	<!--<div class="sidebar-header">
+		<img src="assets/img/avatars/8.jpg" class="img-avatar" alt="Avatar">
+		<div><strong>Cesar Vega</strong></div>
+		<div class="text-muted"><small>Software &amp; Engineer</small></div>
+
+		<div class="btn-group" role="group" aria-label="Button group with nested dropdown">
+			<button type="button" class="btn btn-link">
+          <i class="icon-settings"></i>
+        </button>
+			<button type="button" class="btn btn-link">
+          <i class="icon-speech"></i>
+          <span class="badge badge-warning badge-pill">5</span>
+        </button>
+			<button type="button" class="btn btn-link">
+          <i class="icon-user"></i>
+        </button>
+		</div>
+	</div>-->
+
+	<nav class="sidebar-nav">
+		<div class="wrapper">
+
+			<div class="window">
+				<div *ngFor="let item of iframeData" class="row dragdrop" [dragula]='"second-bag"'>
+					<div class="drag mt-2">
+						<div class="title">
+							<input type="search" name="search" value="{{item}}" />
+							<a [href]="sanitizer.bypassSecurityTrustResourceUrl(item)" class="button reload"></a>
+						</div>
+						<div class="container mb-2">
+							<iframe id="frame" [src]="sanitizer.bypassSecurityTrustResourceUrl(item)">
+							</iframe>
+						</div>
+						<!--<button type="button" class="btn btn-info" (click)="loadIframe(sanitizer.bypassSecurityTrustResourceUrl(item))">load</button>-->
+					</div>
+				</div>
+			</div>
+		</div>
+	</nav>
+</div>

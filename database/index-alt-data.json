@@ -1,0 +1,1086 @@
+[{
+        "section_one": [{
+            "title": "",
+            "description": "",
+            "paragraphs": [""],
+            "list": ["Miami Barber", "Grooming for the modern gentleman"],
+            "linkSources": [],
+            "images": ["./assets/html/images/bg1.jpg"],
+            "icon": "",
+            "cards": [{
+                "icon": "",
+                "image": "",
+                "title": "",
+                "paragraph": "",
+                "list": [],
+                "linkSources": [],
+                "footerDescription": "",
+                "footerButtons": [{
+                    "icon": "",
+                    "description": ""
+                }]
+            }],
+            "buttons": [{
+                    "icon": "",
+                    "description": ""
+                },
+                {
+                    "icon": "",
+                    "description": "Book Appointment"
+                }
+            ]
+        }]
+    },
+    {
+        "section_two": [{
+            "title": "About Us",
+            "description": "Look good, feel good. At Miami Barber we take men's hair cuts and beard shaves seriously.",
+            "paragraphs": ["Miami Barber is a classic style men's barbershop located in the heart of Miami. Your satisfaction is our number one priority. Phasellus a quam tristique, viverra lorem auctor, fringilla massa. Integer vitae nisi interdum, tincidunt odio ac, maximus neque. Suspendisse bibendum risus eget nulla porttitor, sed ullamcorper ligula malesuada. Donec eu cursus ipsum.  "],
+            "list": [],
+            "linkSources": [],
+            "images": [],
+            "icon": "",
+            "cards": [{
+                    "icon": "ti-location-pin",
+                    "image": "",
+                    "title": "Convenient Location",
+                    "paragraph": "We are located in the heart of Miami. We also provide delivery service. Morbi diam sapien, pellentesque non felis in, mollis porttitor lacus. Donec ac eros dignissim, posuere arcu ac, molestie dui.",
+                    "list": [],
+                    "linkSources": [],
+                    "footerDescription": "",
+                    "footerButtons": [{
+                        "icon": "",
+                        "description": ""
+                    }]
+                },
+                {
+                    "icon": "ti-crown",
+                    "image": "",
+                    "title": "Luxury Service",
+                    "paragraph": "From start to end and beyond. We make you feel like a king at Miami Barber. Your satisfaction is our top priority. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus.",
+                    "list": [],
+                    "linkSources": [],
+                    "footerDescription": "",
+                    "footerButtons": [{
+                        "icon": "",
+                        "description": ""
+                    }]
+                },
+                {
+                    "icon": "ti-money",
+                    "image": "",
+                    "title": "Affordable Pricing",
+                    "paragraph": "A sharp look shouldn't slice your wallet. That is why we set out prices to save you money and still look great. Nunc imperdiet, tellus eget dictum fringilla, diam nunc sollicitudin justo.",
+                    "list": [],
+                    "linkSources": [],
+                    "footerDescription": "",
+                    "footerButtons": [{
+                        "icon": "",
+                        "description": ""
+                    }]
+                }
+            ],
+            "buttons": [{
+                    "icon": "",
+                    "description": ""
+                },
+                {
+                    "icon": "",
+                    "description": ""
+                }
+            ]
+        }]
+    },
+    {
+        "section_three": [{
+                "title": "1",
+                "description": "Shop",
+                "paragraphs": [],
+                "list": [],
+                "linkSources": [],
+                "images": ["./assets/html/images/bg5.jpg"],
+                "icon": "",
+                "cards": [],
+                "buttons": [{
+                        "icon": "",
+                        "description": ""
+                    },
+                    {
+                        "icon": "",
+                        "description": ""
+                    }
+                ]
+            },
+            {
+                "title": "10",
+                "description": "Pro Barbers",
+                "paragraphs": [],
+                "list": [],
+                "linkSources": [],
+                "images": [],
+                "icon": "",
+                "cards": [],
+                "buttons": [{
+                        "icon": "",
+                        "description": ""
+                    },
+                    {
+                        "icon": "",
+                        "description": ""
+                    }
+                ]
+            },
+            {
+                "title": "100's",
+                "description": "Hair Products",
+                "paragraphs": [],
+                "list": [],
+                "linkSources": [],
+                "images": [],
+                "icon": "",
+                "cards": [],
+                "buttons": [{
+                        "icon": "",
+                        "description": ""
+                    },
+                    {
+                        "icon": "",
+                        "description": ""
+                    }
+                ]
+            },
+            {
+                "title": "1000's",
+                "description": "Happy Clients",
+                "paragraphs": [],
+                "list": [],
+                "linkSources": [],
+                "images": [],
+                "icon": "",
+                "cards": [],
+                "buttons": [{
+                        "icon": "",
+                        "description": ""
+                    },
+                    {
+                        "icon": "",
+                        "description": ""
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "section_four": [{
+            "title": "Services",
+            "description": "Just sit back and relax. We ask, we understand and we deliver outstanding service.",
+            "paragraphs": [],
+            "list": [],
+            "linkSources": [],
+            "images": [],
+            "icon": "",
+            "cards": [{
+                    "icon": "ti-image",
+                    "image": "",
+                    "title": "Deluxe Haircut - $20",
+                    "paragraph": "Expound the actual teachings of the great explorer of the truth, the master-builder of human happiness.",
+                    "list": ["- 24/4 Full support", "- Free photoshop editing", "- Web hosting", "- Free customization", "- Content Creation", "- Backend development", "- Copyrighting"],
+                    "linkSources": ["Learn More"],
+                    "footerDescription": "",
+                    "footerButtons": [{
+                        "icon": "",
+                        "description": ""
+                    }]
+                },
+                {
+                    "icon": "ti-android",
+                    "image": "",
+                    "title": "APP DEVELOPMENT",
+                    "paragraph": "Expound the actual teachings of the great explorer of the truth, the master-builder of human happiness.",
+                    "list": ["- 24/4 Full support", "- Free photoshop editing", "- Web hosting", "- Free customization", "- Content Creation", "- Backend development", "- Copyrighting"],
+                    "linkSources": ["Learn More"],
+                    "footerDescription": "",
+                    "footerButtons": [{
+                        "icon": "",
+                        "description": ""
+                    }]
+                },
+                {
+                    "icon": "ti-briefcase",
+                    "image": "",
+                    "title": "MARKETING",
+                    "paragraph": "Expound the actual teachings of the great explorer of the truth, the master-builder of human happiness.",
+                    "list": ["- 24/4 Full support", "- Free photoshop editing", "- Web hosting", "- Free customization", "- Content Creation", "- Backend development", "- Copyrighting"],
+                    "linkSources": ["Learn More"],
+                    "footerDescription": "",
+                    "footerButtons": [{
+                        "icon": "",
+                        "description": ""
+                    }]
+                },
+                {
+                    "icon": "ti-wordpress",
+                    "image": "",
+                    "title": "WEB DEVELOPMENT",
+                    "paragraph": "Expound the actual teachings of the great explorer of the truth, the master-builder of human happiness.",
+                    "list": ["- 24/4 Full support", "- Free photoshop editing", "- Web hosting", "- Free customization", "- Content Creation", "- Backend development", "- Copyrighting"],
+                    "linkSources": ["Learn More"],
+                    "footerDescription": "",
+                    "footerButtons": [{
+                        "icon": "",
+                        "description": ""
+                    }]
+                }
+            ],
+            "buttons": [{
+                    "icon": "",
+                    "description": ""
+                },
+                {
+                    "icon": "",
+                    "description": ""
+                }
+            ]
+        }]
+    },
+    {
+        "section_five": [{
+            "title": "GEMS agency specializes in the design and development of any type of website.",
+            "description": "",
+            "paragraphs": [],
+            "list": [],
+            "linkSources": [],
+            "images": ["./assets/html/images/bg3.jpg"],
+            "icon": "",
+            "cards": [{
+                    "icon": "ti-thumb-up",
+                    "image": "",
+                    "title": "24/7 Support",
+                    "paragraph": "Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin.",
+                    "list": [],
+                    "linkSources": [""],
+                    "footerDescription": "",
+                    "footerButtons": [{
+                        "icon": "",
+                        "description": ""
+                    }]
+                },
+                {
+                    "icon": "ti-twitter",
+                    "image": "",
+                    "title": "Bootstrap 4",
+                    "paragraph": "Expound the actual teachings of the great explorer of the truth, the master-builder of human happiness.",
+                    "list": [],
+                    "linkSources": [],
+                    "footerDescription": "",
+                    "footerButtons": [{
+                        "icon": "",
+                        "description": ""
+                    }]
+                }
+            ],
+            "buttons": [{
+                "icon": "",
+                "description": "Hire Us Today"
+            }]
+        }]
+    },
+    {
+        "section_six": [{
+            "title": "Services",
+            "description": "Full service grooming with attention to detail. Luxury service and affordable pricing.",
+            "paragraphs": [],
+            "list": [],
+            "linkSources": [],
+            "images": [],
+            "icon": "",
+            "cards": [{
+                    "icon": "",
+                    "image": "",
+                    "title": "Beard Shave",
+                    "paragraph": "Hot towel, and sharp blades. Our signature beard shave will make you look like a million bucks.",
+                    "list": [],
+                    "linkSources": [""],
+                    "footerDescription": "",
+                    "footerButtons": [{
+                        "icon": "",
+                        "description": "$15"
+                    }]
+                },
+                {
+                    "icon": "",
+                    "image": "",
+                    "title": "Deluxe Haircut",
+                    "paragraph": "Experience the perfect haircut. Trimmed and blended to perfection. No one does it better.",
+                    "list": [],
+                    "linkSources": [],
+                    "footerDescription": "",
+                    "footerButtons": [{
+                        "icon": "",
+                        "description": "$20"
+                    }]
+                },
+                {
+                    "icon": "",
+                    "image": "",
+                    "title": "Manicure",
+                    "paragraph": "Ladies love smooth hands. Compliment your hair cut and beard shave with proper nail care.",
+                    "list": [""],
+                    "linkSources": [],
+                    "footerDescription": "",
+                    "footerButtons": [{
+                        "icon": "",
+                        "description": "$10"
+                    }]
+                }
+            ],
+            "buttons": [{
+                "icon": "",
+                "description": ""
+            }]
+        }]
+    },
+    {
+        "section_seven": [{
+            "title": "Barber Gallery",
+            "description": "Sharp and clean cuts. Happy clients. That's what we're all about. Take a look!",
+            "paragraphs": [""],
+            "list": [""],
+            "linkSources": [],
+            "images": [],
+            "icon": "",
+            "cards": [{
+                    "icon": "",
+                    "image": "",
+                    "title": "BEAUTIFUL FOLIO",
+                    "paragraph": "Lorem Ipsum",
+                    "list": [],
+                    "linkSources": [""],
+                    "footerDescription": "",
+                    "footerButtons": [{
+                            "icon": "ti-zoom-in",
+                            "description": ""
+                        },
+                        {
+                            "icon": "ti-fullscreen",
+                            "description": ""
+                        }
+                    ]
+                },
+                {
+                    "icon": "",
+                    "image": "",
+                    "title": "BEAUTIFUL FOLIO",
+                    "paragraph": "Lorem Ipsum",
+                    "list": [],
+                    "linkSources": [""],
+                    "footerDescription": "",
+                    "footerButtons": [{
+                            "icon": "ti-zoom-in",
+                            "description": ""
+                        },
+                        {
+                            "icon": "ti-fullscreen",
+                            "description": ""
+                        }
+                    ]
+                },
+                {
+                    "icon": "",
+                    "image": "",
+                    "title": "BEAUTIFUL FOLIO",
+                    "paragraph": "Lorem Ipsum",
+                    "list": [],
+                    "linkSources": [""],
+                    "footerDescription": "",
+                    "footerButtons": [{
+                            "icon": "ti-zoom-in",
+                            "description": ""
+                        },
+                        {
+                            "icon": "ti-fullscreen",
+                            "description": ""
+                        }
+                    ]
+                },
+                {
+                    "icon": "",
+                    "image": "",
+                    "title": "BEAUTIFUL FOLIO",
+                    "paragraph": "Lorem Ipsum",
+                    "list": [],
+                    "linkSources": [""],
+                    "footerDescription": "",
+                    "footerButtons": [{
+                            "icon": "ti-zoom-in",
+                            "description": ""
+                        },
+                        {
+                            "icon": "ti-fullscreen",
+                            "description": ""
+                        }
+                    ]
+                },
+                {
+                    "icon": "",
+                    "image": "",
+                    "title": "BEAUTIFUL FOLIO",
+                    "paragraph": "Lorem Ipsum",
+                    "list": [],
+                    "linkSources": [""],
+                    "footerDescription": "",
+                    "footerButtons": [{
+                            "icon": "ti-zoom-in",
+                            "description": ""
+                        },
+                        {
+                            "icon": "ti-fullscreen",
+                            "description": ""
+                        }
+                    ]
+                },
+                {
+                    "icon": "",
+                    "image": "",
+                    "title": "BEAUTIFUL FOLIO",
+                    "paragraph": "Lorem Ipsum",
+                    "list": [],
+                    "linkSources": [""],
+                    "footerDescription": "",
+                    "footerButtons": [{
+                            "icon": "ti-zoom-in",
+                            "description": ""
+                        },
+                        {
+                            "icon": "ti-fullscreen",
+                            "description": ""
+                        }
+                    ]
+                },
+                {
+                    "icon": "",
+                    "image": "",
+                    "title": "BEAUTIFUL FOLIO",
+                    "paragraph": "Lorem Ipsum",
+                    "list": [],
+                    "linkSources": [""],
+                    "footerDescription": "",
+                    "footerButtons": [{
+                            "icon": "ti-zoom-in",
+                            "description": ""
+                        },
+                        {
+                            "icon": "ti-fullscreen",
+                            "description": ""
+                        }
+                    ]
+                },
+                {
+                    "icon": "",
+                    "image": "",
+                    "title": "BEAUTIFUL FOLIO",
+                    "paragraph": "Lorem Ipsum",
+                    "list": [],
+                    "linkSources": [""],
+                    "footerDescription": "",
+                    "footerButtons": [{
+                            "icon": "ti-zoom-in",
+                            "description": ""
+                        },
+                        {
+                            "icon": "ti-fullscreen",
+                            "description": ""
+                        }
+                    ]
+                }
+            ],
+            "buttons": [{
+                "icon": "",
+                "description": ""
+            }]
+        }]
+    },
+    {
+        "section_eight": [{
+            "title": "Our Team",
+            "description": "Our team is comprised of passionate professionals who take grooming very seriously.",
+            "paragraphs": [],
+            "list": [],
+            "linkSources": [],
+            "images": [],
+            "icon": "",
+            "cards": [{
+                    "icon": "",
+                    "image": "./assets/html/images/lisa.jpg",
+                    "title": "Lisa Lindo",
+                    "paragraph": "Customer Service",
+                    "list": [],
+                    "linkSources": [""],
+                    "footerDescription": "",
+                    "footerButtons": [{
+                            "icon": "ti-facebook",
+                            "description": ""
+                        },
+                        {
+                            "icon": "ti-twitter",
+                            "description": ""
+                        },
+                        {
+                            "icon": "ti-instagram",
+                            "description": ""
+                        }
+                    ]
+                },
+                {
+                    "icon": "",
+                    "image": "",
+                    "title": "Carl Sharp",
+                    "paragraph": "Master Barber",
+                    "list": [],
+                    "linkSources": [""],
+                    "footerDescription": "",
+                    "footerButtons": [{
+                            "icon": "ti-facebook",
+                            "description": ""
+                        },
+                        {
+                            "icon": "ti-twitter",
+                            "description": ""
+                        },
+                        {
+                            "icon": "ti-instagram",
+                            "description": ""
+                        }
+                    ]
+                },
+                {
+                    "icon": "",
+                    "image": "",
+                    "title": "Lord Blade",
+                    "paragraph": "Shave Samurai",
+                    "list": [],
+                    "linkSources": [""],
+                    "footerDescription": "",
+                    "footerButtons": [{
+                            "icon": "ti-facebook",
+                            "description": ""
+                        },
+                        {
+                            "icon": "ti-twitter",
+                            "description": ""
+                        },
+                        {
+                            "icon": "ti-instagram",
+                            "description": ""
+                        }
+                    ]
+                },
+                {
+                    "icon": "",
+                    "image": "",
+                    "title": "Dora Pulley",
+                    "paragraph": "Hands Specialist",
+                    "list": [],
+                    "linkSources": [""],
+                    "footerDescription": "",
+                    "footerButtons": [{
+                            "icon": "ti-facebook",
+                            "description": ""
+                        },
+                        {
+                            "icon": "ti-twitter",
+                            "description": ""
+                        },
+                        {
+                            "icon": "ti-instagram",
+                            "description": ""
+                        }
+                    ]
+                }
+            ],
+            "buttons": [{
+                "icon": "",
+                "description": ""
+            }]
+        }]
+    },
+    {
+        "section_nine": [{
+            "title": "HOW WE DO",
+            "description": "libero ex dapibus diam expound the actual teachings of the great explorer of the truth",
+            "paragraphs": [],
+            "list": [],
+            "linkSources": [],
+            "images": [],
+            "icon": "",
+            "cards": [{
+                    "icon": "ti-search",
+                    "image": "",
+                    "title": "RESEARCH",
+                    "paragraph": "Vestibulum placerat, ipsum vel mollis ornare, libero ex dapibus diam, gravida tempor.",
+                    "list": [],
+                    "linkSources": [""],
+                    "footerDescription": "",
+                    "footerButtons": []
+                },
+                {
+                    "icon": "ti-pencil",
+                    "image": "",
+                    "title": "PLANING",
+                    "paragraph": "Vestibulum placerat, ipsum vel mollis ornare, libero ex dapibus diam, gravida tempor.",
+                    "list": [],
+                    "linkSources": [""],
+                    "footerDescription": "",
+                    "footerButtons": []
+                },
+                {
+                    "icon": "ti-settings",
+                    "image": "",
+                    "title": "DEVELOP",
+                    "paragraph": "Vestibulum placerat, ipsum vel mollis ornare, libero ex dapibus diam, gravida tempor.",
+                    "list": [],
+                    "linkSources": [""],
+                    "footerDescription": "",
+                    "footerButtons": []
+                },
+                {
+                    "icon": "ti-car",
+                    "image": "",
+                    "title": "LAUNCH",
+                    "paragraph": "Vestibulum placerat, ipsum vel mollis ornare, libero ex dapibus diam, gravida tempor.",
+                    "list": [],
+                    "linkSources": [""],
+                    "footerDescription": "",
+                    "footerButtons": []
+                }
+            ],
+            "buttons": [{
+                "icon": "",
+                "description": ""
+            }]
+        }]
+    },
+    {
+        "section_ten": [{
+            "title": "",
+            "description": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using",
+            "paragraphs": [],
+            "list": ["DIGITAL STUDIO", "CREATIVE AGENCY", "24/7 CUSTOMER SUPPORT"],
+            "linkSources": [],
+            "images": ["./assets/html/images/bg4.jpg"],
+            "icon": "",
+            "cards": [{
+                "icon": "",
+                "image": "",
+                "title": "",
+                "paragraph": "",
+                "list": [],
+                "linkSources": [],
+                "footerDescription": "",
+                "footerButtons": [{
+                    "icon": "",
+                    "description": ""
+                }]
+            }],
+            "buttons": [{
+                "icon": "",
+                "description": "Buy Now"
+            }]
+        }]
+    },
+    {
+        "section_eleven": [{
+            "title": "FROM JOURNAL",
+            "description": "libero ex dapibus diam expound the actual teachings of the great explorer of the truth",
+            "paragraphs": [],
+            "list": [],
+            "linkSources": [],
+            "images": [],
+            "icon": "",
+            "cards": [{
+                    "icon": "",
+                    "image": "./assets/html/images/img1.jpg",
+                    "title": "Great color combination",
+                    "paragraph": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,",
+                    "list": [],
+                    "linkSources": [],
+                    "footerDescription": "Read More >",
+                    "footerButtons": [{
+                        "icon": "",
+                        "description": ""
+                    }]
+                },
+                {
+                    "icon": "",
+                    "image": "./assets/html/images/img2.jpg",
+                    "title": "Enjoy your free time",
+                    "paragraph": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,",
+                    "list": [],
+                    "linkSources": [],
+                    "footerDescription": "Read More >",
+                    "footerButtons": [{
+                        "icon": "",
+                        "description": ""
+                    }]
+                },
+                {
+                    "icon": "",
+                    "image": "./assets/html/images/img3.jpg",
+                    "title": "Beautiful watch with gems",
+                    "paragraph": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,",
+                    "list": [],
+                    "linkSources": [],
+                    "footerDescription": "Read More >",
+                    "footerButtons": [{
+                        "icon": "",
+                        "description": ""
+                    }]
+                },
+                {
+                    "icon": "",
+                    "image": "./assets/html/images/img2.jpg",
+                    "title": "Enjoy your free time",
+                    "paragraph": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,",
+                    "list": [],
+                    "linkSources": [],
+                    "footerDescription": "Read More >",
+                    "footerButtons": [{
+                        "icon": "",
+                        "description": ""
+                    }]
+                },
+                {
+                    "icon": "",
+                    "image": "./assets/html/images/img3.jpg",
+                    "title": "Beautiful watch with gems",
+                    "paragraph": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,",
+                    "list": [],
+                    "linkSources": [],
+                    "footerDescription": "Read More >",
+                    "footerButtons": [{
+                        "icon": "",
+                        "description": ""
+                    }]
+                },
+                {
+                    "icon": "",
+                    "image": "https://player.vimeo.com/video/79293746",
+                    "title": "Post with vimeo video",
+                    "paragraph": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,",
+                    "list": [],
+                    "linkSources": [],
+                    "footerDescription": "Read More >",
+                    "footerButtons": [{
+                        "icon": "",
+                        "description": ""
+                    }]
+                }
+            ],
+            "buttons": [{
+                "icon": "",
+                "description": ""
+            }]
+        }]
+    },
+    {
+        "section_twelve": [{
+            "title": "CUSTOMER REVIEWS",
+            "description": "libero ex dapibus diam expound the actual teachings of the great explorer of the truth",
+            "paragraphs": [],
+            "list": [],
+            "linkSources": [],
+            "images": ["./assets/html/images/bg2.jpg"],
+            "icon": "",
+            "cards": [{
+                    "icon": "",
+                    "image": "./assets/html/images/team-1.jpg",
+                    "title": "EMILY DOE",
+                    "paragraph": "'Praesent sodales, quam vitae gravida interdum, ex mi bibendum enim, sit amet tristique mi quam vel odio. Donec non nunc condimentum, hendrerit elit sed, condimentum magna. Suspendisse imperdiet purus vel ornare cursus.' ",
+                    "list": [],
+                    "linkSources": [],
+                    "footerDescription": "Gems customers",
+                    "footerButtons": [{
+                        "icon": "",
+                        "description": ""
+                    }]
+                },
+                {
+                    "icon": "",
+                    "image": "./assets/html/images/team-2.jpg",
+                    "title": "EMILY DOE",
+                    "paragraph": "'Praesent sodales, quam vitae gravida interdum, ex mi bibendum enim, sit amet tristique mi quam vel odio. Donec non nunc condimentum, hendrerit elit sed, condimentum magna. Suspendisse imperdiet purus vel ornare cursus.' ",
+                    "list": [],
+                    "linkSources": [],
+                    "footerDescription": "Gems customers",
+                    "footerButtons": [{
+                        "icon": "",
+                        "description": ""
+                    }]
+                },
+                {
+                    "icon": "",
+                    "image": "./assets/html/images/team-3.jpg",
+                    "title": "EMILY DOE",
+                    "paragraph": "'Praesent sodales, quam vitae gravida interdum, ex mi bibendum enim, sit amet tristique mi quam vel odio. Donec non nunc condimentum, hendrerit elit sed, condimentum magna. Suspendisse imperdiet purus vel ornare cursus.' ",
+                    "list": [],
+                    "linkSources": [],
+                    "footerDescription": "Gems customers",
+                    "footerButtons": [{
+                        "icon": "",
+                        "description": ""
+                    }]
+                }
+            ],
+            "buttons": [{
+                "icon": "",
+                "description": ""
+            }]
+        }]
+    },
+    {
+        "section_thirteen": [{
+            "title": "CONTACT US",
+            "description": "libero ex dapibus diam expound the actual teachings of the great explorer of the truth",
+            "paragraphs": ["SAY HELLO!"],
+            "list": [],
+            "linkSources": [],
+            "images": ["https://www.google.com/maps/embed/v1/place?q=place_id:ChIJWalJ2wO6j4AR4A9dNSj2ATI&key=AIzaSyAcC0a6iry-BDvy1LA4EFqlvKBGTdZELJA"],
+            "icon": "",
+            "cards": [{
+                    "icon": "",
+                    "image": "",
+                    "title": "",
+                    "paragraph": "Full Name...",
+                    "list": [],
+                    "linkSources": [],
+                    "footerDescription": "",
+                    "footerButtons": [{
+                        "icon": "",
+                        "description": ""
+                    }]
+                },
+                {
+                    "icon": "",
+                    "image": "",
+                    "title": "",
+                    "paragraph": "Email Address...",
+                    "list": [],
+                    "linkSources": [],
+                    "footerDescription": "",
+                    "footerButtons": [{
+                        "icon": "",
+                        "description": ""
+                    }]
+                },
+                {
+                    "icon": "",
+                    "image": "",
+                    "title": "",
+                    "paragraph": "Message...",
+                    "list": [],
+                    "linkSources": [],
+                    "footerDescription": "",
+                    "footerButtons": [{
+                        "icon": "",
+                        "description": ""
+                    }]
+                }
+            ],
+            "buttons": [{
+                "icon": "",
+                "description": "Send Message"
+            }]
+        }]
+    },
+    {
+        "section_fourteen": [{
+            "title": "",
+            "description": "",
+            "paragraphs": [],
+            "list": [],
+            "linkSources": [],
+            "images": [],
+            "icon": "",
+            "cards": [{
+                    "icon": "ti-home",
+                    "image": "",
+                    "title": "Address",
+                    "paragraph": "",
+                    "list": ["124, Munna Wali, Lorem Street", "Sydney, Australia", "302012"],
+                    "linkSources": [],
+                    "footerDescription": "",
+                    "footerButtons": [{
+                        "icon": "",
+                        "description": ""
+                    }]
+                },
+                {
+                    "icon": "ti-headphone",
+                    "image": "",
+                    "title": "Phone & fax",
+                    "paragraph": "",
+                    "list": ["+01 12 301 963", "+01 33 399 939"],
+                    "linkSources": [],
+                    "footerDescription": "",
+                    "footerButtons": [{
+                        "icon": "",
+                        "description": ""
+                    }]
+                },
+                {
+                    "icon": "ti-email",
+                    "image": "",
+                    "title": "Email & website",
+                    "paragraph": "",
+                    "list": ["support@gems.com", "www.gemsagency.new"],
+                    "linkSources": [],
+                    "footerDescription": "",
+                    "footerButtons": [{
+                        "icon": "",
+                        "description": ""
+                    }]
+                }
+            ],
+            "buttons": [{
+                "icon": "",
+                "description": ""
+            }]
+        }]
+    },
+    {
+        "section_fifteen": [{
+            "title": "",
+            "description": "",
+            "paragraphs": [],
+            "list": [],
+            "linkSources": [],
+            "images": [],
+            "icon": "",
+            "cards": [{
+                    "icon": "",
+                    "image": "",
+                    "title": "Plan a Project",
+                    "paragraph": "Hire us",
+                    "list": [],
+                    "linkSources": [],
+                    "footerDescription": "",
+                    "footerButtons": [{
+                        "icon": "",
+                        "description": ""
+                    }]
+                },
+                {
+                    "icon": "",
+                    "image": "",
+                    "title": "Work with us",
+                    "paragraph": "Join the team",
+                    "list": [],
+                    "linkSources": [],
+                    "footerDescription": "",
+                    "footerButtons": [{
+                        "icon": "",
+                        "description": ""
+                    }]
+                }
+            ],
+            "buttons": [{
+                "icon": "",
+                "description": ""
+            }]
+        }]
+    },
+    {
+        "section_sixteen": [{
+            "title": "",
+            "description": "Copyright 2020. All Right Reserved. GEMS",
+            "paragraphs": [],
+            "list": [],
+            "linkSources": [],
+            "images": [],
+            "icon": "",
+            "cards": [{
+                    "icon": "ti-facebook",
+                    "image": "",
+                    "title": "",
+                    "paragraph": "",
+                    "list": [],
+                    "linkSources": [],
+                    "footerDescription": "",
+                    "footerButtons": [{
+                        "icon": "",
+                        "description": ""
+                    }]
+                },
+                {
+                    "icon": "ti-twitter",
+                    "image": "",
+                    "title": "",
+                    "paragraph": "",
+                    "list": [],
+                    "linkSources": [],
+                    "footerDescription": "",
+                    "footerButtons": [{
+                        "icon": "",
+                        "description": ""
+                    }]
+                },
+                {
+                    "icon": "ti-google",
+                    "image": "",
+                    "title": "",
+                    "paragraph": "",
+                    "list": [],
+                    "linkSources": [],
+                    "footerDescription": "",
+                    "footerButtons": [{
+                        "icon": "",
+                        "description": ""
+                    }]
+                },
+                {
+                    "icon": "ti-instagram",
+                    "image": "",
+                    "title": "",
+                    "paragraph": "",
+                    "list": [],
+                    "linkSources": [],
+                    "footerDescription": "",
+                    "footerButtons": [{
+                        "icon": "",
+                        "description": ""
+                    }]
+                },
+                {
+                    "icon": "ti-dribbble",
+                    "image": "",
+                    "title": "",
+                    "paragraph": "",
+                    "list": [],
+                    "linkSources": [],
+                    "footerDescription": "",
+                    "footerButtons": [{
+                        "icon": "",
+                        "description": ""
+                    }]
+                },
+                {
+                    "icon": "ti-linkedin",
+                    "image": "",
+                    "title": "",
+                    "paragraph": "",
+                    "list": [],
+                    "linkSources": [],
+                    "footerDescription": "",
+                    "footerButtons": [{
+                        "icon": "",
+                        "description": ""
+                    }]
+                }
+            ],
+            "buttons": [{
+                "icon": "",
+                "description": ""
+            }]
+        }]
+    }
+]

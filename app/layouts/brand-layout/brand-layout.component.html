@@ -1,0 +1,25 @@
+
+    <!--<header-brand-layout [hidden]="hideHeader"></header-brand-layout>-->
+    <div [class]="" [hidden]="hideBody">
+    <!--<div [class]="appType" [hidden]="hideBody">-->
+        <!--<left-menu-brand-layout [hidden]="hideLeftMenu"></left-menu-brand-layout>-->
+        <!-- Main content -->
+        <main class="" >
+        <!--<main class="main" >-->
+            <!-- Breadcrumb -->
+            <!--<ol class="breadcrumb mb-0 hidden-md-down" >
+            <breadcrumbs></breadcrumbs>        
+        </ol>-->
+        <div [class]="containerType">
+            <router-outlet ></router-outlet>
+            <!-- /.conainer-fluid -->
+            </div>
+        </main>
+        <right-menu-brand-layout [hidden]="hideRightMenu"></right-menu-brand-layout>
+    </div>
+    <footer class="app-footer" [hidden]="hideFooter">
+        <a href="https://brandinstitute.com">BI</a> &copy; 2017 Brand Institute.
+        <span class="float-right">
+        Powered by <a href="https://brandinstitute.com">IS TEAM</a>
+    </span>
+    </footer>

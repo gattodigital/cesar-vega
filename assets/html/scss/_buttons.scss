@@ -1,0 +1,387 @@
+/*
+Buttons
+*/
+.btn-link{
+    color: $primary-color;
+    vertical-align:middle;
+    &:after{
+        font-family: 'themify';
+        content: "\e649";
+        font-size: 12px;
+        padding-left: 2px;
+        position: relative;
+        top: 1px;
+    }
+    &:hover{
+        color: #999;
+        text-decoration: none;
+    }
+}
+.btn-primary{
+    background: $primary-color;
+    border-color: $primary-color;
+}
+.btn-info{
+    background: $info-color;
+    border-color: $info-color;
+}
+.btn-warning{
+    background: $warning-color;
+    border-color: $warning-color;
+}
+.btn-danger{
+    background: $danger-color;
+    border-color: $danger-color;
+}
+.btn-outline-primary{
+    border-color:$primary-color;
+    color: $primary-color;
+    &:focus{
+        border-color:$primary-color;
+        color: $primary-color;
+    }
+    &:hover{
+        background: $primary-color;
+        color: #fff;
+        border-color:$primary-color;
+    }
+}
+.btn{
+    font-size: 13px;
+    font-weight: 500;
+    text-transform:uppercase;
+    font-family:$base-font;
+    letter-spacing:2px;
+    vertical-align:middle;
+    border-radius: 2px;
+    transition: all .15s ease-in-out; 
+    -o-transition: all .15s ease-in-out; 
+    -moz-transition: all .15s ease-in-out; 
+    -webkit-transition: all .15s ease-in-out;
+    &:focus, &:active, &.active, &:active:focus, &.active:focus {
+        outline: 0;
+        outline-offset: 0;  
+        box-shadow: none;
+        -moz-box-shadow: none;
+        -webkit-box-shadow: none;
+    }
+    &.btn-rounded{
+        border-radius: 100px;
+        &.btn-lg{
+            padding: .75rem 2rem;
+        }
+    }
+    &.btn-3d{
+        border-bottom: 3px solid rgba(0,0,0,0.2);
+    }
+    i{
+        vertical-align: middle;
+        margin-right: 8px;
+        display:inline-block;
+        position: relative;
+        top:-2px;
+    }
+    &.btn-lg{
+        font-size: 13px;
+    }
+    &:focus{
+        outline: 0!important;
+    }
+}
+.btn-white-outline{
+    border: 1px solid rgba(255,255,255,0.8);
+    color: #fff;
+    &:hover{
+        background-color:rgba(255,255,255,0.2);
+        color: #fff;
+    }
+    &:focus{
+        border: 1px solid rgba(255,255,255,0.8);
+        color: #fff;
+        background-color: transparent;
+    }
+}
+.btn-primary{
+    &:focus{
+        outline: 0!important;
+        color:#fff;
+    }
+    &:hover{
+        background: rgba($primary-color,.9);
+        border-color: $primary-color;
+    }
+}
+.btn-primary,.btn-success,.btn-info,.btn-warning,.btn-danger,.btn-dark{
+    &:focus{
+        box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+        -webkit-box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+    }
+}
+/**************
+
+Material design buttons
+
+
+
+
+/****************
+
+SOCIAL BUTTONS
+
+**********************/
+/**social icons default size**/
+.social-icon {
+    margin: 0 5px 5px 0;
+    width: 40px;
+    height: 40px;
+    font-size: 20px;
+    line-height: 40px !important;
+    color: #555;
+    text-shadow: none;
+    border-radius: 3px;
+    overflow: hidden;
+    display: block;
+    float: left;
+    text-align: center;
+    border: 1px solid #AAA;
+}
+.social-icon:hover {
+    border-color: transparent;
+}
+
+.social-icon i {
+    display: block;
+    -moz-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+    line-height: 40px;
+    position: relative;
+}
+.social-icon i:last-child {
+    color: #FFF !important;
+}
+
+.social-icon:hover i:first-child {
+    margin-top: -40px;
+}
+
+/***social icons lg (big)***/
+.social-icon-lg {
+    margin: 0 5px 5px 0;
+    width: 60px;
+    height: 60px;
+    font-size: 30px;
+    line-height: 60px !important;
+    color: #555;
+    text-shadow: none;
+    border-radius: 3px;
+    overflow: hidden;
+    display: block;
+    float: left;
+    text-align: center;
+    border: 1px solid #AAA;
+}
+.social-icon-lg:hover {
+    border-color: transparent;
+}
+
+.social-icon-lg i {
+    display: block;
+    -moz-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+    line-height: 60px;
+    position: relative;
+}
+.social-icon-lg i:last-child {
+    color: #FFF !important;
+}
+
+.social-icon-lg:hover i:first-child {
+    margin-top: -60px;
+}
+
+/***social icons small***/
+.social-icon-sm {
+    margin: 0 5px 5px 0;
+    width: 30px;
+    height: 30px;
+    font-size: 18px;
+    line-height: 30px !important;
+    color: #555;
+    text-shadow: none;
+    border-radius: 3px;
+    overflow: hidden;
+    display: block;
+    float: left;
+    text-align: center;
+    border: 1px solid #AAA;
+}
+.social-icon-sm:hover {
+    border-color: transparent;
+}
+
+.social-icon-sm i {
+    display: block;
+    -moz-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+    line-height: 30px;
+    position: relative;
+}
+.social-icon-sm i:last-child {
+    color: #FFF !important;
+}
+
+.social-icon-sm:hover i:first-child {
+    margin-top: -30px;
+}
+
+si-border {
+    border: 1px solid #AAA !important;
+}
+
+.si-border-round {
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    border-radius: 50%;
+}
+
+.si-dark-round {
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    border-radius: 50%;
+}
+
+.si-gray-round {
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    border-radius: 50%;
+}
+
+.si-gray {
+    background: #f3f3f3;
+    border: 0px;
+}
+
+.si-dark {
+    background-color: #333;
+    border: 0px !important;
+    color: #fff !important;
+}
+
+/**icons hover colored**/
+.si-colored-facebook, .si-facebook:hover {
+    background-color: #3B5998 !important;
+}
+
+.si-colored-twitter, .si-twitter:hover {
+    background-color: #00ACEE !important;
+}
+
+.si-colored-google-plus, .si-g-plus:hover {
+    background-color: #DD4B39 !important;
+}
+
+.si-colored-skype, .si-skype:hover {
+    background-color: #00AFF0 !important;
+}
+
+.si-linkedin:hover, .si-colored-linkedin {
+    background-color: #0E76A8 !important;
+}
+
+.si-pin:hover, .si-colored-pinterest {
+    background-color: #C8232C !important;
+}
+
+.si-rss:hover, .si-colored-rss {
+    background-color: #EE802F !important;
+}
+
+.si-pinterest:hover, .si-colored-pinterest {
+    background-color: #C8232C !important;
+}
+
+.si-tumblr:hover, .si-colored-tumblr {
+    background-color: #34526F !important;
+}
+
+.si-vimeo:hover, .si-colored-vimeo {
+    background-color: #86C9EF !important;
+}
+
+.si-digg:hover, .si-colored-digg {
+    background-color: #191919 !important;
+}
+
+.si-instagram:hover, .si-colored-instagram {
+    background-color: #3F729B !important;
+}
+
+.si-flickr:hover, .si-colored-flickr {
+    background-color: #FF0084 !important;
+}
+
+.si-paypal:hover, .si-colored-paypal {
+    background-color: #00588B !important;
+}
+
+.si-yahoo:hover, .si-colored-yahoo {
+    background-color: #720E9E !important;
+}
+
+.si-android:hover, .si-colored-andriod {
+    background-color: #A4C639 !important;
+}
+
+.si-appstore:hover, .si-colored-apple {
+    background-color: #000 !important;
+}
+
+.si-dropbox:hover {
+    background-color: #3D9AE8 !important;
+}
+
+.si-dribbble:hover, .si-colored-dribbble {
+    background-color: #EA4C89 !important;
+}
+
+.si-soundcloud:hover, .si-colored-soundcoloud {
+    background-color: #F70 !important;
+}
+
+.si-xing:hover, .si-colored-xing {
+    background-color: #126567 !important;
+}
+
+.si-phone:hover, .si-colored-phone {
+    background-color: #444 !important;
+}
+
+.si-behance:hover, .si-colored-behance {
+    background-color: #053eff !important;
+}
+
+.si-github:hover, .si-colored-github {
+    background-color: #171515 !important;
+}
+
+.si-stumbleupon:hover, .si-colored-stumbleupon {
+    background-color: #F74425 !important;
+}
+
+.si-email:hover, .si-colored-email {
+    background-color: #6567A5 !important;
+}
+
+.si-wordpress:hover, .si-colored-wordpress {
+    background-color: #1E8CBE !important;
+}
+

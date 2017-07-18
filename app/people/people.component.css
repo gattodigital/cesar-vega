@@ -1,0 +1,65 @@
+/* dynamic generated css*/
+#wrap h5 { color:#da8238; }
+#wrap h6 { color:#da8238; }
+a {color:#f1833a;}
+
+a:hover {color:#8aba2c;}
+
+#wrap #nav a { color:#4c4c4c;}
+
+.top-bar { background-color:#da8238; }
+#footer { background-color:#3a3a3a; }
+.footbot { background-color:#ffffff; }
+
+/* == TextColors
+---------------- */
+.colorskin-custom #nav a:hover, .colorskin-custom #nav li:hover > a, .colorskin-custom #nav li.current > a, .colorskin-custom #nav li.active > a, .colorskin-custom #nav ul li a:hover, .colorskin-custom #nav li.current ul li a:hover, .colorskin-custom .nav-wrap2 #nav ul li a:hover, .colorskin-custom .nav-wrap2.darknavi #nav ul li a:hover, .colorskin-custom #nav ul li.current > a, .colorskin-custom #nav ul li:hover > a, .colorskin-custom nav.primary .portfolioFilters a.selected, .colorskin-custom nav.primary .portfolioFilters a:hover, .colorskin-custom nav.primary ul li a:active, .colorskin-custom .colorf , .colorskin-custom .callout i, .colorskin-custom a.magicmore:hover, .colorskin-custom .icon-box i, .colorskin-custom .icon-box1 i, .colorskin-custom .icon-box3:hover i, .colorskin-custom .icon-box5 i, .colorskin-custom .icon-box8 i, .colorskin-custom .icon-box9 i, .colorskin-custom .icon-box10 i, .colorskin-custom .icon-box11 i, .colorskin-custom .zoomex2 a:hover i, .colorskin-custom .testimonials-slider-w .testimonial-content h4 q:before, .colorskin-custom .testimonials-slider-w .testimonial-content h4 q:after {color: }
+
+
+/* == Backgrounds
+----------------- */
+.colorskin-custom .icon-box1:hover i, .colorskin-custom .icon-box6 i, .colorskin-custom .icon-box9:hover i, .colorskin-custom .icon-box10:hover i, .colorskin-custom .icon-box11:hover, .colorskin-custom .colorb, .colorskin-custom .footer-in .contact-inf button, .colorskin-custom #footer .side-list li:hover img, .colorskin-custom .our-process-item:hover i, .colorskin-custom .icon-box1:hover i, .colorskin-custom .side-list li:hover img,
+.colorskin-custom #header.sm-rgt-mn #menu-icon span.mn-ext1, 
+.colorskin-custom #header.sm-rgt-mn #menu-icon span.mn-ext2, 
+.colorskin-custom #header.sm-rgt-mn #menu-icon span.mn-ext3 {background-color: }
+
+
+/* == BorderColors
+------------------ */
+.colorskin-custom nav.primary .portfolioFilters a.selected, .colorskin-custom nav.primary ul li a:active, .colorskin-custom .our-team-ca:hover figure img, .colorskin-custom .footer-in h5.subtitle:after, .colorskin-custom .our-team:hover figure, .colorskin-custom a.magicmore:after, .colorskin-custom .icon-box5:hover i , .colorskin-custom .zoomex2 a:hover i, .colorskin-custom .max-title2:after, .colorskin-custom .max-title4:after, .colorskin-custom .max-title5:after, .colorskin-custom .sidebar h4.subtitle:after, .colorskin-custom h6.h-sub-content {border-color:}
+
+
+.transparent-header-w #header {position:relative; background: #3a3a3a}
+.top-links {
+    color: rgba(102, 102, 102, 1);
+    letter-spacing:3px;
+    display: table;
+    float: left;
+    font-family: georgia;
+    font-size: 15px;
+    font-style: italic;
+    padding: 4px 0 0 4px;}
+#nav a span, #nav > li > a::after {color:#fff;}
+.blog-post h3, .blog-single-post h1 {font-size:30px; line-height:30px; margin-bottom:0px;}
+.latestposts-two .blog-line p.blog-cat a, .blog-post a {color:#444;}
+.blox.dark {color:#444;}
+.blog-post h3, .blog-single-post h1 {margin-bottom:25px;}
+.wpb_alert p:last-child, #content .wpb_alert p:last-child, 
+.transparent-header-w #header #nav > li > a, .transparent-header-w .woo-cart-header .header-cart span, .transparent-header-w a.search-form-icon {color:#fff; text-shadow:none;}
+a, a:visited {color:#3a3a3a;}
+.transparent-header-d #header {background:#3a3a3a;}
+.footer-in h5.subtitle, .toggle-top-area h5.subtitle {border-bottom:0px;}
+#nav li, #header.sticky #nav-wrap #nav > li {padding: 0 12px;}
+.col-md-8.omega .row-wrapper-x {margin-top:40px;}
+#nav ul {width:208px;}
+.transparent-header-w .top-bar, .transparent-header-w #headline, .transparent-header-w .breadcrumbs-w {display:inherit;}
+.top-links {color:#fff;}
+#main-content.container {padding-top:0px;}
+.sidebar.leftside {background:#3a3a3a; padding-left:40px; margin-bottom:-5000px; padding-bottom:5000px;}
+a, a:visited {}
+.widget h4.subtitle {color:#da8238;}
+.widget ul li:hover, #footer.litex .footer-in .widget ul li:hover {background:none;}
+.blox.page-title-x, .parallax-sec.page-title-x, .video-sec.page-title-x {margin-top:-10px;}
+.wpb_revslider_element, .wpb_layerslider_element, .max-hero {margin-top:-10px;}
+#menu-icon:hover, #menu-icon.active {background:#444;}
+.wpb_alert p:last-child, #content .wpb_alert p:last-child, .transparent-header-w #header #nav > li > a, .transparent-header-w .woo-cart-header .header-cart span, .transparent-header-w a.search-form-icon {color:#ccc;}

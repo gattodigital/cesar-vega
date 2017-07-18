@@ -1,0 +1,571 @@
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>gems | One Page</title>
+    <!-- Plugins CSS -->
+    <link href="./assets/html/css/plugins/plugins.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link href="./assets/html/css/style.css" rel="stylesheet">
+</head>
+
+<div [hidden]="true" id="preloader">
+    <div id="preloader-inner"></div>
+</div>
+<!--/preloader-->
+
+<nav class="navbar navbar-toggleable-md navbar-light bg-faded">
+    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+    <a class="navbar-brand" href="index.html"><img src="./assets/html/images/logo-dark.png" alt="logo"></a>
+    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item"><a data-scroll class="nav-link active" href="#home">Home</a></li>
+            <li class="nav-item"><a data-scroll class="nav-link" href="#about">About</a></li>
+            <li class="nav-item"><a data-scroll class="nav-link" href="#services">Services</a></li>
+            <li class="nav-item"><a data-scroll class="nav-link" href="#folio">Portfolio</a></li>
+            <li class="nav-item"><a data-scroll class="nav-link" href="#news">Journal</a></li>
+            <li class="nav-item"><a data-scroll class="nav-link" href="#contact">Contact</a></li>
+            <li class="nav-item dropdown">
+                <span class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Extras
+                        </span>
+                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
+                    <a class="dropdown-item" href="index.html">Original</a>
+                    <a class="dropdown-item" href="index-alt.html">Original alt</a>
+                    <a class="dropdown-item" href="index-agency.html">Minimal Agency</a>
+                    <a class="dropdown-item" href="index-vimeo.html">vimeo video</a>
+                    <a class="dropdown-item" href="index-youtube.html">Youtube video</a>
+                    <a class="dropdown-item" href="index-offcanvas.html">Offcanvas Nav</a>
+                    <a class="dropdown-item" href="journal.html">journal</a>
+                    <a class="dropdown-item" href="journal-detail.html">journal Detail</a>
+                    <a class="dropdown-item" href="project-single.html">Portfolio Detail</a>
+                    <a class="dropdown-item" href="typography.html">Typography</a>
+                </div>
+            </li>
+            <li class="nav-item"><a class="nav-link bg-primary btn-rounded" href="#">Buy Now</a></li>
+        </ul>
+    </div>
+</nav>
+<!--/.navbar-->
+
+<!-- SECTION 1 -->
+<section id='home' class="hero heroFullscreen bg-parallax" data-jarallax='{"speed": 0.2}' [style.background]="'url('+sectionOneImage+')'">
+    <div class='hero-overlay'></div>
+    <div class="d-flex align-items-center">
+        <div class="scroll-to hero-mouse"><a data-scroll="" href="#about"><i class="ti-angle-down"></i></a></div>
+        <div class="container">
+            <div class="row">
+                <div class=" col-md-8  offset-md-2 text-center">
+                    <div class="tlt hero-tlt">
+                        <ul class="texts mb0">
+                            <li *ngFor="let item of sectionOneList" data-out-effect="fadeOut" data-in-effect="fadeIn">{{item}}</li>
+                        </ul>
+                    </div>
+                    <div class="buttons">
+                        <a data-scroll href="#about" class="btn btn-white-outline btn-lg">{{sectionOneButtonOne}}</a>
+                        <a data-scroll href="#folio" class="btn btn-primary btn-lg">{{sectionOneButtonTwo}}</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--/.hero-->
+<!-- /SECTION 1 -->
+
+<!-- SECTION 2 -->
+<section id="about" class="pt90 pb60">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8 col-lg-6 offset-md-2 offset-lg-3">
+                <div class="section-title">
+                    <h4>{{sectionTwoTitle}}</h4>
+                    <p class="lead">{{sectionTwoDescription}}</p>
+                </div>
+            </div>
+        </div>
+        <!--/section title-->
+        <p class='mb40 text-center'>
+            {{sectionTwoParagraph}}
+        </p>
+        <div class="row">
+            <div *ngFor="let item of sectionTwoCards" class="col-md-4 mb30 wow zoomIn" data-wow-duration=".5s" data-wow-delay=".2s">
+                <div class="media icon-box">
+                    <div class="d-flex mr-4">
+                        <i [class]='item.icon'></i>
+                    </div>
+                    <div class="media-body">
+                        <h4 class="mt-0 text-uppercase">{{item.title}}
+                        </h4>
+                        <p class='mb0 text-small'>
+                            {{item.paragraph}}
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <!--/col-->
+        </div>
+    </div>
+</section>
+<!--about us-->
+<!-- /SECTION 2 -->
+
+<!-- SECTION 3 -->
+<div class="parallax-cta pt90 pb60 bg-parallax" data-jarallax='{"speed": 0.2}' [style.background]="'url('+sectionThreeImage+')'">
+    <div class="container">
+        <div class="row">
+            <div *ngFor="let item of sectionThree" class="col-lg-3 col-md-6 mb30 wow fadeIn" data-wow-duration=".5s" data-wow-delay=".2s">
+                <div class="media fun-facts">
+                    <div class="d-flex align-self-center mr-4">
+                        <i [class]='item.icon'></i>
+                    </div>
+                    <div class="media-body">
+                        <h3 class="mt-0 text-uppercase display-4 text-white">{{item.title}}</h3>
+                        <p class='mb0 text-small text-uppercase'>{{item.description}}</p>
+                    </div>
+                </div>
+            </div>
+            <!--/col-->
+        </div>
+    </div>
+</div>
+<!--/.fun facts-->
+<!-- /SECTION 3 -->
+
+<!-- SECTION 4 -->
+<section id="services" class="pt90 pb60">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8 col-lg-6 offset-md-2 offset-lg-3">
+                <div class="section-title">
+                    <h4>{{sectionFourTitle}}</h4>
+                    <p class="lead">{{sectionFourDescription}}</p>
+                </div>
+            </div>
+        </div>
+        <!--/section title-->
+
+        <div class="row">
+            <div *ngFor="let item of sectionFourCards" class="col-lg-3 col-md-6 mb30 wow zoomIn" data-wow-delay=".1s" data-wow-duration=".2s">
+                <div class="icon-box mb20">
+                    <i [class]="item.icon"></i>
+                </div>
+                <h4 class="text-uppercase">{{item.title}}</h4>
+                <p class="mb0 text-small">{{item.description}}</p>
+                <hr>
+                <ul class="list-unstyled text-small">
+                    <li *ngFor="let list of item.list">{{list}}</li>
+                </ul>
+                <a href="#" class="btn-link btn-sm">{{item.linkSources[0]}}</a>
+            </div>
+            <!--/.col-->
+        </div>
+    </div>
+</section>
+<!--Services-->
+<!-- /SECTION 4 -->
+
+<!-- SECTION 5 -->
+<div class="extra-services pt90 pb90 bg-parallax" data-jarallax='{"speed": 0.2}' [style.background]="'url('+sectionFiveImage+')'">
+    <div class="extra-service-bg mb60">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-4 mb30">
+                    <h2 class=" wow fadeInLeft" data-wow-delay=".2s" data-wow-duration=".3s">
+                        {{sectionFiveTitle}}
+                    </h2>
+                </div>
+                <!--/.col-->
+                <div *ngFor="let item of sectionFiveCards" class="col-md-4 mb30">
+                    <div class="media">
+                        <div class="d-flex mr-3">
+                            <i [class]="item.icon"></i>
+                        </div>
+                        <div class="media-body">
+                            <h4 class="mt-0">{{item.title}}</h4>
+                            {{item.paragraph}}
+                        </div>
+                    </div>
+                </div>
+                <!--/.col-->
+            </div>
+            <!--/.row-->
+
+        </div>
+    </div>
+    <div class="mb30 text-center container">
+        <a href="#" class="btn btn-lg btn-primary">{{sectionFiveButtonOne}}</a>
+    </div>
+</div>
+<!--Extra Services-->
+<!-- /SECTION 5 -->
+
+<!-- SECTION 6 -->
+<div class="bg-faded pt90 pb60">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8 col-lg-6 offset-md-2 offset-lg-3">
+                <div class="section-title">
+                    <h4>{{sectionSixTitle}}</h4>
+                    <p class="lead">{{sectionSixDescription}}</p>
+                </div>
+            </div>
+        </div>
+        <!--/section title-->
+        <div class="row align-items-center">
+            <div *ngFor="let item of sectionSixCards" class="col-md-4 mb30 wow zoomIn" data-wow-delay=".2s" data-wow-duration=".3s">
+                <div class="price-card">
+                    <h4>{{item.title}}</h4>
+                    <hr>
+                    <p class="mb0">
+                        {{item.paragraph}}
+                    </p>
+                    <hr>
+                    <a href="#" class="btn btn-rounded btn-lg btn-secondary">{{item.footerButtons[0].description}}</a>
+                </div>
+            </div>
+            <!--/col-->
+        </div>
+    </div>
+</div>
+<!--/pricing-->
+
+
+<!-- SECTION 7 -->
+<section id="folio" class="bg-parllax sectionDark pt100 pb70" data-jarallax='{"speed": 0.2}' style='background-image: url("https://image.shutterstock.com/z/stock-photo-frame-blank-advertisement-message-abstract-concept-413674186.jpg")'>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8 col-lg-6 offset-md-2 offset-lg-3">
+                <div class="section-title">
+                    <h4>{{sectionSevenTitle}}</h4>
+                    <p class="lead">{{sectionSevenDescription}}</p>
+                </div>
+            </div>
+        </div>
+        <!--/section title-->
+        <ul class="filter-list list-inline margin-b-40 text-center">
+            <li *ngFor="let item of sectionSevenList" class="is-checked">{{item}}</li>
+        </ul>
+
+        <div class="row filter-row popup-row">
+            <div *ngFor="let item of sectionSevenCards" class="design col-md-4 col-sm-6 col-lg-3 mb30 filter-item">
+                <div class="work-card">
+                    <img src="./assets/html/images/w1.jpg" alt="" class="img-fluid">
+                    <div class="work-overlay">
+                        <div class="overlay-content">
+                            <div>
+                                <h4>{{item.title}}</h4>
+                                <em>{{item.paragraph}}</em>
+                            </div>
+                            <a *ngFor="let buttonIcon of item.footerButtons" class="popup-gallery" href="./assets/html/images/w1.jpg">
+                                <i [class]="buttonIcon.icon"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--end col-->
+        </div>
+        <div class="text-center pt40">
+            <h4 class="text-uppercase text-white">
+                {{sectionSevenParagraphs}}
+            </h4>
+        </div>
+    </div>
+    <!--./container-->
+</section>
+<!--folio-->
+<!-- /SECTION 7 -->
+
+<!-- SECTION 8 -->
+<div class="pt90 pb60">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8 col-lg-6 offset-md-2 offset-lg-3">
+                <div class="section-title">
+                    <h4>{{sectionEightTitle}}</h4>
+                    <p class="lead">{{sectionEightDescription}}</p>
+                </div>
+            </div>
+        </div>
+        <!--/section title-->
+        <div class="row">
+            <div *ngFor="let item of sectionEightCards" class="col-sm-6 col-md-4 col-lg-3 mb30">
+                <div class="person-card wow fadeIn" data-wow-duration=".2s" data-wow-delay=".1s">
+                    <div class="person-thumb">
+                        <img src="./assets/html/images/team-1.jpg" alt="" class="img-fluid">
+                        <ul class="list-inline">
+                            <li *ngFor="let buttonIcon of item.footerButtons" class="list-inline-item">
+                                <a href="#">
+                                    <i [class]="buttonIcon.icon"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="person-content">
+                        <h4 class="text-uppercase mb0">{{item.title}}</h4>
+                        <span>{{item.paragraph}}</span>
+                    </div>
+                </div>
+                <!--/person card-->
+            </div>
+            <!--/col-->
+        </div>
+    </div>
+</div>
+<!--/team-->
+<!-- /SECTION 8 -->
+
+<!-- SECTION 9 -->
+<div class="pt90 pb60 bg-faded">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8 col-lg-6 offset-md-2 offset-lg-3">
+                <div class="section-title">
+                    <h4>{{sectionNineTitle}}</h4>
+                    <p class="lead">{{sectionNineDescription}}</p>
+                </div>
+            </div>
+        </div>
+        <!--/section title-->
+        <div class="row process-row">
+            <div *ngFor="let item of sectionNineCards" class="col-lg-3 col-md-6 mb30 text-center">
+                <div class="process-icon mb20">
+                    <i [class]="item.icon"></i>
+                </div>
+                <!--/icon-->
+                <h4 class="text-uppercase">{{item.title}}</h4>
+                <p>{{item.paragraph}}</p>
+            </div>
+            <!--/col-->
+        </div>
+    </div>
+</div>
+<!--/process-->
+<!-- /SECTION 9 -->
+
+<!-- SECTION 10 -->
+<div class="textillate-container bg-parllax parallax-overlay pt100 pb100" data-jarallax='{"speed": 0.2}' [style.background]="'url('+sectionTenImage+')'">
+    <div class="container text-center">
+        <div class="row">
+            <div class="col-md-8 offset-md-2">
+                <div class="tlt">
+                    <ul class="texts mb0">
+                        <li *ngFor="let item of sectionTenList" data-out-effect="fadeOut" data-in-effect="fadeInDown">{{item}}</li>
+                    </ul>
+                </div>
+                <p class="mb20">
+                    {{sectionTenDescription}}
+                </p>
+                <a href="#" class="btn btn-white-outline btn-lg">{{sectionTenButtonOne}}</a>
+            </div>
+        </div>
+    </div>
+</div>
+<!--/ animated text-->
+<!-- /SECTION 10 -->
+
+<!-- SECTION 11 -->
+<section id="news" class="pt90 pb60">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8 col-lg-6 offset-md-2 offset-lg-3">
+                <div class="section-title">
+                    <h4>{{sectionElevenTitle}}</h4>
+                    <p class="lead">{{sectionElevenDescription}}</p>
+                </div>
+            </div>
+        </div>
+        <!--/section title-->
+        <div class='owl-row'>
+            <div *ngFor="let item of sectionElevenCards" class="owl-news owl-theme owl-carousel">
+                <div *ngIf="item.title !== 'Post with vimeo video'" class="item">
+                    <div class='post-card'>
+                        <div class='post-thumb mb20'>
+                            <a href='post-detail.html'>
+                                <img [src]='item.image' alt='' class='img-fluid'>
+                            </a>
+                        </div>
+                        <!--/.thumb-->
+                        <div class='post-meta'>
+                            <h4><a href='#'>{{item.title}}</a></h4>
+                        </div>
+                        <p>{{item.paragraph}}</p>
+                        <div class='text-right'>
+                            <a href='post-detail.html' class='btn btn-link'>{{item.footerDescription}}</a>
+                        </div>
+                    </div>
+                </div>
+                <!--/.item-->
+            </div>
+            <div class="owl-news owl-theme owl-carousel">
+                <div class="item">
+                    <div class='post-card'>
+                        <div class='post-thumb mb20'>
+                            <a href='post-detail.html'>
+                                <div class="embed-responsive embed-responsive-16by9">
+                                    <iframe class='embed-responsive-item' [src]="sectionElevenVideo | safe" width="730" height="319" allowfullscreen></iframe>
+                                </div>
+                            </a>
+                        </div>
+                        <!--/.thumb-->
+                        <div class='post-meta'>
+                            <h4><a href='#'>{{sectionElevenVideoTitle}}</a></h4>
+                        </div>
+                        <p>
+                            {{sectionElevenVideoCardParagraph}}
+                        </p>
+                        <div class='text-right'>
+                            <a href='post-detail.html' class='btn btn-link'>{{sectionElevenVideoFooterDescription}}</a>
+                        </div>
+                    </div>
+                </div>
+                <!--/.item-->
+            </div>
+        </div>
+    </div>
+</section>
+<!--/ Journal-->
+<!-- /SECTION 11 -->
+
+<!-- SECTION 12 -->
+<div class='testimonials bg-parllax parallax-overlay sectionDark pt90 pb60' data-jarallax='{"speed": 0.2}' [style.background]="'url('+sectionTwelveImage+')'">
+    <div class='container'>
+        <div class="row">
+            <div class="col-md-8 col-lg-6 offset-md-2 offset-lg-3">
+                <div class="section-title">
+                    <h4>{{sectionTwelveTitle}}</h4>
+                    <p class="lead">{{sectionTwelveDescription}}</p>
+                </div>
+            </div>
+        </div>
+        <!--/section title-->
+
+        <div class='owl-feedback owl-carousel owl-theme'>
+            <div class='item'>
+                <div *ngFor="let item of sectionTwelveCards" class='row align-items-center'>
+                    <div class='col-md-2 offset-md-1'>
+                        <img [src]='item.image' alt='' class='rounded-circle img-fluid' width='120'>
+                    </div>
+                    <div class='col-md-8'>
+                        <p class='lead'>
+                            {{item.paragraph}}
+                        </p>
+                        <h4 class="text-uppercase mb5">{{item.title}}</h4>
+                        <em>{{item.footerDescription}}</em>
+                    </div>
+                </div>
+            </div>
+            <!--/item-->
+        </div>
+    </div>
+</div>
+<!--/ Testimonials-->
+<!-- /SECTION 12 -->
+
+<!-- SECTION 13 -->
+<section id="contact" class="pt90 pb60">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8 col-lg-6 offset-md-2 offset-lg-3">
+                <div class="section-title">
+                    <h4>{{sectionThirteenTitle}}</h4>
+                    <p class="lead">{{sectionThirteenDescription}}</p>
+                </div>
+            </div>
+        </div>
+        <!--/section title-->
+        <div class="row">
+            <div class="col-md-6 mb30">
+                <iframe height="380" frameborder="0" style="border:0;width:100%;" class="mb0" [src]="sectionThirteenMap | safe"></iframe>
+            </div>
+            <div class="col-md-6">
+                <h4 class="text-uppercase">{{sectionThirteenParagraph}}</h4>
+                <hr>
+                <form method="post" action="#" class="gems-contact">
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <div *ngFor="let item of sectionThirteenCards" class=" mb20">
+                                <input *ngIf="item.paragraph !== 'Message...'" type="text" class="form-control" [placeholder]="item.paragraph" />
+                            </div>
+                        </div>
+                        <div class="col-sm-12">
+                            <textarea name="message" class="form-control mb20" rows="5" [placeholder]="sectionThirteenTextareaParagraph"></textarea>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-12 text-center">
+                            <div class="data-status"></div>
+                            <!-- data submit status -->
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-12 text-right">
+                            <button type="submit" name="submit" class="btn btn-lg btn-primary">{{sectionThirteenButtonMessage}}</button>
+                        </div>
+                    </div>
+                </form>
+                <!--form end-->
+            </div>
+        </div>
+
+    </div>
+</section>
+<!--/.contact-->
+<!-- /SECTION 13 -->
+
+<!-- SECTION 14 -->
+<div class="bg-primary contact-info pt50 pb20">
+    <div class="container">
+        <div class="row">
+            <div *ngFor="let item of sectionFourteenCards" class="col-md-4 mb30">
+                <div class="media">
+                    <div class="d-flex mr-3">
+                        <i [class]="item.icon"></i>
+                    </div>
+                    <div class="media-body">
+                        <h5 class="mt-0">{{item.title}}</h5>
+                        <div *ngFor="let list of item.list">{{list}}</div>
+                    </div>
+                </div>
+            </div>
+            <!--/.col-->
+        </div>
+    </div>
+</div>
+<!--/.contact-info-->
+<!-- /SECTION 14 -->
+
+<!-- SECTION 15 -->
+<div class="bottom-links container-fluid">
+    <div class="row align-items-center">
+        <a *ngFor="let item of sectionFifteenCards" class="col-md-6 links-col bg-dark wow zoomIn" data-wow-delay=".2s" data-wow-duration=".3s" href="#">
+            <span class="text-uppercase">{{item.title}}</span>{{item.paragraph}}
+        </a>
+    </div>
+</div>
+<!--/.bottom links-->
+<!-- /SECTION 15 -->
+
+
+<footer id="footer" class="footer  pt90 pb90">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <ul class="list-inline">
+                    <li *ngFor="let item of sectionSixteenCards" class="list-inline-item">
+                        <a href="#"><i [class]="item.icon"></i></a>
+                    </li>
+                </ul>
+                <span>&copy; {{sectionSixteenDescription}}</span>
+            </div>
+        </div>
+    </div>
+</footer>
+<!--back to top-->
+<a href="#" class="back-to-top hidden-xs-down" id="back-to-top"><i class="ti-angle-up"></i></a>
+<!-- jQuery first, then Tether, then Bootstrap JS. -->
+<script src="./assets/html/js/plugins/plugins.js"></script>
+<script src="./assets/html/js/gems.custom.js"></script>

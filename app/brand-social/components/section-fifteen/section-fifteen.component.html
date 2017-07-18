@@ -1,0 +1,19 @@
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>gems | One Page</title>
+    <!-- Plugins CSS -->
+    <link href="./assets/html/css/plugins/plugins.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link href="./assets/html/css/style.css" rel="stylesheet">
+</head>
+
+<div class="bottom-links container-fluid">
+    <div class="row align-items-center">
+        <a *ngFor="let item of sectionFifteenCards" class="col-md-6 links-col bg-dark wow zoomIn" data-wow-delay=".2s" data-wow-duration=".3s" href="#">
+            <span class="text-uppercase">{{item.title}}</span>{{item.paragraph}}
+        </a>
+    </div>
+</div>
+<!--/.bottom links-->

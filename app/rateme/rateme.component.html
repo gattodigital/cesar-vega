@@ -1,0 +1,62 @@
+<div class="app flex-row align-items-center">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-md-8">
+
+        <div class="card card-inverse card-danger" style="
+      background-color: #3A3A3A">
+          <div class="card-header">
+        <!--<div class="card card-inverse card-info" style="height: 500px;background-image:url(./assets/img/nova.jpg); background-size:750px;
+      background-repeat: no-repeat;
+      background-color: #3A3A3A">
+          <div class="card-header">-->
+           
+            <!--<label class="switch switch-sm switch-text switch-info float-right mb-0">
+            <input type="checkbox" class="switch-input">
+            <span class="switch-label" data-on="On" data-off="Off"></span>
+            <span class="switch-handle"></span>
+          </label>-->
+          </div>
+       
+          <div class="card-block">
+                <div class="row justify-content-center">
+         <img style="max-height: 150px;display:block;text-align:center;" src="./assets/img/nva.jpg" alt="logo">
+          </div>
+            <!--
+           <button type="button" (click)="ratemeWithGoogle()" style="margin-top: 40%;"  class="btn btn-primary btn-lg btn-block"> 
+                      Rate us with   <i class="fa fa-google" aria-hidden="true">oogle</i>
+                      </button>-->
+            <button *ngIf="isAuth" type="button" (click)="ratemeWithGoogle()" style="margin-top: 10%;"  class="btn btn-danger btn-lg btn-block"> 
+                     Please Start Here!
+            </button>
+            <div style=" display:block;text-align:center; color:yellow; font-size: 3em;">
+              <i  (click)="ratemeWithGoogle()" class="fa fa-star" aria-hidden="true"></i>
+              <i  (click)="ratemeWithGoogle()" class="fa fa-star" aria-hidden="true"></i>
+              <i  (click)="ratemeWithGoogle()" class="fa fa-star" aria-hidden="true"></i>
+              <i  (click)="ratemeWithGoogle()" class="fa fa-star" aria-hidden="true"></i>
+              <i  (click)="ratemeWithGoogle()" class="fa fa-star" aria-hidden="true"></i>
+            </div>
+            <!--<button type="button" (click)="ratemeWithYelp()" style=""  class="btn btn-success btn-lg btn-block"> 
+                      Rate us with Yelp  <i class="fa  fa-yelp" aria-hidden="true"></i>
+                      </button>
+           <button type="button" (click)="signInWithFacebook()" style=""  class="btn btn-success btn-lg btn-block"> 
+                      Rate us with Yelp  <i class="fa  fa-facebook" aria-hidden="true"></i>
+                      </button>-->
+           <button  *ngIf="!isAuth" type="button" (click)="loginWithGoogle()"  class="btn btn-danger btn-lg btn-block"> 
+                       Please leave us your Feedback <i class="fa  fa-google" aria-hidden="true"></i>
+                      </button>
+           <button  *ngIf="!isAuth" type="button" (click)="google('google')"  class="btn btn-info btn-sm btn-block"> 
+                       Please loging with  <i class="fa  fa-google" aria-hidden="true"></i>
+                      </button>
+           <button  *ngIf="!isAuth" type="button" (click)="linkedin('linkedin')"  class="btn btn-danger btn-sm btn-block"> 
+                       Please loging with  <i class="fa  fa-linkedin" aria-hidden="true"></i>
+                      </button>
+           <button  *ngIf="!isAuth" type="button" (click)="facebook('facebook')"  class="btn btn-primary btn-sm btn-block"> 
+                       Please loging with  <i class="fa  fa-facebook" aria-hidden="true"></i>
+                      </button>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>

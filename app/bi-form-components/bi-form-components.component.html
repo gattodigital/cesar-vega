@@ -1,0 +1,543 @@
+<div class="form-horizontal" [style.marginBottom.px]="10">
+
+    <!-- REVIEW TABLE TEMPLATE -->
+    <!--<div *ngIf="componentType == 'bi-table'">
+        <div class="card">
+            <div class="card-header" [style.fontSize.px]="20">
+                Review Page
+            </div>
+            <div class="card-block">
+                <div *ngFor="let item of componentData.options">
+                    <div (click)="buttonClicked('editing',item.page); " class="form-group row" style="border-bottom: 1px solid lightgrey;" *ngIf="item.question !== ''">
+                        <label class="col-md-3 form-control-label">
+                            {{item.question}}
+                        </label>
+                        <div class="col-md-9 input-group">
+                            <a (click)="buttonClicked('',item.page); " [style.color]="'blue'">{{item.answer || 'N/A'}}</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>-->
+
+    <!-- BI-SIGNUP-FORM TEMPLATE -->
+    <div *ngIf="componentType == 'bi-signup-form'">
+
+        <div class="form-group row">
+            <label class="col-md-3 form-control-label">
+                    Email *
+            </label>
+            <div class="col-md-9 input-group">
+                <span class="input-group-addon"><i class="icon-user"></i></span>
+                <input #validationRefEmail="ngModel" (blur)="saveInCacheMemory();verifyInformation(userEmail, 'email');" [name]="componentData.labeValue" [(ngModel)]="userEmail" [type]="text" class="form-control" [required]="componentData.require" [minlength]="componentData.requireMinLength"
+                    [placeholder]="'Enter a valid Email'" />
+            </div>
+            <div class="col-md-3"></div>
+            <div class="col-md-9">
+                <div *ngIf="emailNotValid" class="text-danger">{{emailValidationMessage}}</div>
+                <div [hidden]="hideMsg"> <small *ngIf="validationRefEmail.errors?.required" class="text-danger">Email is required to register</small></div>
+                <div [hidden]="hideMsg"> <small *ngIf="validationRefEmail.errors?.minlength" class="text-danger">This field must be longer than {{validationRefEmail.errors?.minlength.requiredLength}} characters. You only typed {{validationRefEmail.errors?.minlength.actualLength}}</small></div>
+            </div>
+        </div>
+
+        <div class="form-group row">
+            <label class="col-md-3 form-control-label">
+                    Password *
+            </label>
+            <div class="col-md-9 input-group">
+                <span class="input-group-addon"><i class="icon-lock"></i></span>
+                <input #validationRefPassword="ngModel" (blur)="saveInCacheMemory();verifyInformation(userPassword, 'password');" [name]="componentData.labeValue" [(ngModel)]="userPassword" [type]="displayPassword" class="form-control" [minlength]="componentData.requireMinLength"
+                    [placeholder]="'Enter Password'" [required]="componentData.require" />
+            </div>
+            <div class="col-md-3"></div>
+            <div class="col-md-9">
+                <div *ngIf="passwordNotValid" class="text-danger">{{passwordValidationMessage}}</div>
+                <div [hidden]="hideMsg"> <small *ngIf="validationRefPassword.errors?.required" class="text-danger">Password is required to register</small></div>
+                <div [hidden]="hideMsg"> <small *ngIf="validationRefPassword.errors?.minlength" class="text-danger">This field must be longer than {{validationRefPassword.errors?.minlength.requiredLength}} characters. You only typed {{validationRefPassword.errors?.minlength.actualLength}}</small></div>
+            </div>
+        </div>
+
+        <div class="form-group row">
+            <label class="col-md-3 form-control-label">
+                    Confirm password *
+            </label>
+            <div class="col-md-9 input-group">
+                <span class="input-group-addon"><i class="icon-lock"></i></span>
+                <input #validationRefConfirm="ngModel" (input)="passwordMatches(confirmedPassword, userPassword)" [name]="componentData.labeValue" [(ngModel)]="confirmedPassword" [type]="displayPassword" class="form-control" [minlength]="componentData.requireMinLength"
+                    [placeholder]="'Confirm Password'" [required]="componentData.require" />
+            </div>
+            <div class="col-md-3"></div>
+            <div class="col-md-9">
+                <div [hidden]="hideMsg"> <small *ngIf="!matchedPassword || validationRefConfirm.errors?.required" class="text-danger">Password does not match</small></div>
+                <div [hidden]="hideMsg"> <small *ngIf="validationRefConfirm.errors?.minlength" class="text-danger">This field must be longer than {{validationRefConfirm.errors?.minlength.requiredLength}} characters. You only typed {{validationRefConfirm.errors?.minlength.actualLength}}</small></div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- LABEL & ANCHOR TEMPLATE -->
+    <div *ngIf="componentType == 'bi-label'">
+        <div *ngIf="componentData.defaultInputValue === ''" [style.padding.px]="componentData.padding" [style.textAlign]="componentData.textAlign" [style.margin.px]="componentData.margin" class="col-md-12 form-control-label">
+            <label [style.fontFamily]="componentData.fontFamily" [style.fontWeight]="componentData.fontWeight" [style.fontSize.px]="componentData.fontSize" [style.color]="componentData.color">
+                {{componentData.labelValue}}
+       </label>
+        </div>
+        <div *ngIf="componentData.defaultInputValue !== ''" [style.padding.px]="componentData.padding" [style.textAlign]="componentData.textAlign" [style.margin.px]="componentData.margin" class="col-md-12 form-control-label">
+            <a (click)="buttonClicked('',componentData.defaultInputValue); " [style.textDecoration]="'none'" [style.fontFamily]="componentData.fontFamily" [style.fontWeight]="componentData.fontWeight" [style.fontSize.px]="componentData.fontSize" [style.color]="componentData.color">{{componentData.labelValue}}</a>
+        </div>
+    </div>
+
+    <!-- INPUT TEMPLATE (PASSWORD, EMAIL AND TEXT) -->
+    <div *ngIf="componentType == 'bi-input-password' || componentType == 'bi-input-number' || componentType == 'bi-input-email' || componentType == 'bi-input-text'">
+        <div class="form-group row" [style.margin.px]="componentData.margin" [style.padding.px]="componentData.padding">
+            <label class="col-md-3 form-control-label" [style.textAlign]="componentData.textAlign" [style.fontFamily]="componentData.fontFamily" [style.fontWeight]="componentData.fontWeight" [style.fontSize.px]="componentData.fontSize" [style.color]="componentData.color">
+                    {{componentData.labelValue}}
+            </label>
+            <!--<label (dblclick)="onRightClick($event, this);biFormModalSettings.show(this)" class="col-md-3 form-control-label" [style.textAlign]="componentData.textAlign" [style.fontFamily]="componentData.fontFamily" [style.fontWeight]="componentData.fontWeight" [style.fontSize.px]="componentData.fontSize" [style.color]="componentData.color">
+                    {{componentData.labelValue}}
+            </label>-->
+            <div class="col-md-9 input-group">
+                <span [hidden]="componentData.icon ==''|| componentData.iconInputOrientation === 'right'" class="input-group-addon"><bi-input-icon [icon]="biInputIcon" ></bi-input-icon></span>
+                <input #validationRef="ngModel" (blur)="saveInCacheMemory()" [name]="componentData.labeValue" [(ngModel)]="componentData.defaultInputValue" [type]="typeOfTemplate" class="form-control" [required]="componentData.require" [disabled]="componentData.disabled"
+                    [minlength]="componentData.requireMinLength" [tooltip]="componentData.tooltip" [placement]="componentData.tooltipOrientation" [placeholder]="componentData.placeHolder" [value]="componentData.defaultInputValue" />
+                <!--<input #validationRef="ngModel" (dblclick)="onRightClick($event, this);biFormModalSettings.show(this)" (blur)="saveInCacheMemory()" [name]="componentData.labeValue" [(ngModel)]="componentData.defaultInputValue" [type]="typeOfTemplate" class="form-control" [required]="componentData.require" [disabled]="componentData.disabled"
+                    [minlength]="componentData.requireMinLength" [tooltip]="componentData.tooltip" [placement]="componentData.tooltipOrientation" [placeholder]="componentData.placeHolder" [value]="componentData.defaultInputValue" />-->
+                <span [hidden]="componentData.icon =='' || componentData.iconInputOrientation === 'left'" class="input-group-addon"><bi-input-icon [icon]="biInputIcon" ></bi-input-icon></span>
+            </div>
+            <div class="col-md-3"></div>
+            <div class="col-md-9">
+                <div *ngIf="(componentData.labelValue.toLowerCase().match('first name') || componentData.labelValue.toLowerCase().match('last name') || componentData.labelValue.toLowerCase().match('cell phone')) && firstAndLastNameOrCellPhoneNotValid">
+                    {{firstAndLastNameOrCellPhoneValidationMessage}}
+                </div>
+                <div [hidden]="hideMsg"> <small *ngIf="validationRef.errors?.required" class="text-danger">{{componentData.validationMsg}}</small></div>
+                <div [hidden]="hideMsg"> <small *ngIf="validationRef.errors?.minlength" class="text-danger">This field must be longer than {{validationRef.errors?.minlength.requiredLength}} characters. You only typed {{validationRef.errors?.minlength.actualLength}}</small></div>
+            </div>
+        </div>
+        <!-- VERSION CONTROL -->
+        <!--<div *ngFor="let oldData of componentData.versionControl" [hidden]="hideVersionControl" [style.marginBottom.px]="10">
+            <div class="row justify-content-end">
+                <div class="col-md-3"></div>
+                <span class="col-md-9">{{oldData.modifiedAnswer}}</span>
+            </div>
+            <div class="row">
+                <div class="col-md-3"></div>
+                <span class="col-md-9" [style.textAlign]="'right'">{{oldData.date}}, {{oldData.time}}, {{oldData.email}} </span>
+            </div>
+        </div>-->
+    </div>
+
+    <!-- TYPEAHEAD TEMPLATE -->
+    <div *ngIf="componentType == 'bi-typeahead'">
+        <div class="form-group row" [style.margin.px]="componentData.margin" [style.padding.px]="componentData.padding">
+            <label class="col-md-3 form-control-label" [style.textAlign]="componentData.textAlign" [style.fontFamily]="componentData.fontFamily" [style.fontWeight]="componentData.fontWeight" [style.fontSize.px]="componentData.fontSize" [style.color]="componentData.color">
+                    {{componentData.labelValue}}
+            </label>
+            <div class="col-md-9 input-group">
+                <input [(ngModel)]="selected" (blur)="saveInCacheMemory()" [typeahead]="componentData.options" class="form-control" [required]="componentData.require" [disabled]="componentData.disabled" [tooltip]="componentData.tooltip" [placement]="componentData.tooltipOrientation"
+                    [placeholder]="componentData.placeHolder">
+                <!--<div [hidden]="hideMsg"> <small class="text-danger pl-1">this field is required</small></div>-->
+            </div>
+        </div>
+    </div>
+
+    <!-- FILE UPLOAD TEMPLATE -->
+    <div *ngIf="componentType == 'bi-input-upload'">
+        <div class="form-group row" [style.margin.px]="componentData.margin" [style.padding.px]="componentData.padding">
+            <label class="col-md-3 form-control-label" [style.textAlign]="componentData.textAlign" [style.fontFamily]="componentData.fontFamily" [style.fontWeight]="componentData.fontWeight" [style.fontSize.px]="componentData.fontSize" [style.color]="componentData.color">
+                    {{componentData.labelValue}}
+                    <!--{{ uploader.progress }}-->
+            </label>
+            <div class="col-md-9 ">
+                <input type="file" ng2FileSelect [uploader]="uploader" (change)="onChange($event)" class="form-control" [required]="componentData.require" [disabled]="componentData.disabled" [tooltip]="componentData.tooltip" [placement]="componentData.tooltipOrientation"
+                    [placeholder]="componentData.placeHolder" [value]="componentData.defaultInputValue" />
+                <div class="progress progress-xs my-1">
+                    <div aria-valuemax="100" aria-valuemin="0" aria-valuenow="25" class="progress-bar bg-info" role="progressbar" [ngStyle]="{ 'width': uploader.progress + '%' }"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- INPUT DATE TEMPLATE -->
+    <div *ngIf="componentType == 'bi-input-date'">
+        <div class="form-group row" [style.margin.px]="componentData.margin" [style.padding.px]="componentData.padding">
+            <label class="col-md-3 form-control-label" [style.textAlign]="componentData.textAlign" [style.fontFamily]="componentData.fontFamily" [style.fontWeight]="componentData.fontWeight" [style.fontSize.px]="componentData.fontSize" [style.color]="componentData.color">
+                    {{componentData.labelValue}}
+            </label>
+            <div class="col-md-9 ">
+                <!--<span [hidden]="componentData.icon ==''|| componentData.iconInputOrientation === 'right'" class="input-group-addon"><bi-input-icon [icon]="biInputIcon" ></bi-input-icon></span>-->
+                <input type="date" (blur)="saveInCacheMemory()" [(ngModel)]="componentData.defaultInputValue" #validateDate="ngModel" class="form-control" [required]="componentData.require" [disabled]="componentData.disabled" [tooltip]="componentData.tooltip" [placement]="componentData.tooltipOrientation"
+                    [placeholder]="componentData.placeHolder" [value]="componentData.defaultInputValue" />
+                <!--<span [hidden]="componentData.icon =='' || componentData.iconInputOrientation === 'left'" class="input-group-addon"><bi-input-icon [icon]="biInputIcon" ></bi-input-icon></span>-->
+                <div [hidden]="hideMsg"> <small *ngIf="validateDate.errors?.required" class="text-danger pl-0">{{componentData.validationMsg}}</small></div>
+            </div>
+            <div class="col-md-3"></div>
+            <div class="col-md-9">
+                <div *ngIf="componentData.labelValue.toLowerCase().match('date of birth') && dateOfBirthNotValid">
+                    {{dateOfBirthValidationMessage}}
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- TEXTAREA TEMPLATE -->
+    <div *ngIf="componentType == 'bi-textarea'">
+        <div class="form-group row" [style.margin.px]="componentData.margin" [style.padding.px]="componentData.padding">
+            <label class="col-md-3 form-control-label" for="text-input" [style.textAlign]="componentData.textAlign" [style.fontFamily]="componentData.fontFamily" [style.fontWeight]="componentData.fontWeight" [style.fontSize.px]="componentData.fontSize" [style.color]="componentData.color">
+                    {{componentData.labelValue}}
+        </label>
+            <div class="col-md-9">
+                <textarea (blur)="saveInCacheMemory()" class="form-control" [required]="componentData.require" [style.width.px]="componentData.width" [style.height.px]="componentData.height" [disabled]="componentData.disabled" [tooltip]="componentData.tooltip" [placement]="componentData.tooltipOrientation"
+                    [placeholder]="componentData.placeHolder" [value]="componentData.defaultInputValue"></textarea>
+                <!--<div [hidden]="hideMsg"> <small class="text-danger pl-1">this field is required</small></div>-->
+            </div>
+        </div>
+    </div>
+
+    <!-- CHECKBOX TEMPLATE -->
+    <div *ngIf="componentType == 'bi-input-checkbox'">
+        <div class="form-group row" [style.margin.px]="componentData.margin" [style.padding.px]="componentData.padding">
+            <label *ngIf="componentData.labelValue !== ''" class="col-md-3 form-control-label" for="text-input" [style.textAlign]="componentData.textAlign" [style.fontFamily]="componentData.fontFamily" [style.fontWeight]="componentData.fontWeight" [style.color]="componentData.color">
+                    {{componentData.labelValue}}
+        </label>
+            <div class="col-md-9" *ngIf="componentData.labelValue !== ''" [style.textAlign]="componentData.textAlign">
+                <div *ngFor="let option of componentData.options | keys" [style.fontSize.px]="componentData.fontSize">
+                    <div class="radio">
+                        <label [for]="option.names">
+                             <input type="checkbox"
+                             (blur)="saveInCacheMemory()"
+                             [id]="option.names"
+                             [value]="option.names"
+                             [name]="'radioButton'"
+                             (change)="changeOption($event)"
+                             [required]="componentData.require"
+                             [disabled]="componentData.disabled"
+                             [tooltip]="componentData.tooltip"
+                             [placement]="componentData.tooltipOrientation"
+                             [placeholder]="componentData.placeHolder"> {{option.names}}
+                        </label>
+                    </div>
+                </div>
+                <div [hidden]="hideMsg"> <small *ngIf="componentData.defaultInputValue === ''" class="text-danger">{{componentData.validationMsg}}</small></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- RADIO BUTTON TEMPLATE -->
+    <div *ngIf="componentType == 'bi-input-radio'">
+        <div class="form-group row" [style.margin.px]="componentData.margin" [style.padding.px]="componentData.padding">
+            <label class="col-md-3 form-control-label" for="text-input" [style.textAlign]="componentData.textAlign" [style.fontFamily]="componentData.fontFamily" [style.fontWeight]="componentData.fontWeight" [style.fontSize.px]="componentData.fontSize" [style.color]="componentData.color">
+                    {{componentData.labelValue}}
+            </label>
+            <div class="col-md-9" [style.textAlign]="componentData.textAlign">
+                <div *ngFor="let option of componentData.options | keys; let i = index">
+                    <div class="radio">
+                        <input #validateRadio="ngModel" (blur)="saveInCacheMemory()" type="radio" [id]="option.namesnames" [(ngModel)]="componentData.defaultInputValue" [value]="option.names" [name]="componentData.labelValue" [required]="componentData.require" [disabled]="componentData.disabled"
+                            [tooltip]="componentData.tooltip" [placement]="componentData.tooltipOrientation" [placeholder]="componentData.placeHolder">
+                        <label [for]="option.name">
+                            {{option.names}}
+                        </label>
+                    </div>
+                    <div [hidden]="hideMsg"> <small *ngIf="i===componentData.options.length-1 && !validateRadio.value" class="text-danger">{{componentData.validationMsg}}</small></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- SELECT TEMPLATE -->
+    <div *ngIf="componentType == 'bi-select'">
+        <div class="form-group row" [style.margin.px]="componentData.margin" [style.padding.px]="componentData.padding">
+            <label class="col-md-3 form-control-label" for="text-input" [style.textAlign]="componentData.textAlign" [style.fontFamily]="componentData.fontFamily" [style.fontWeight]="componentData.fontWeight" [style.fontSize.px]="componentData.fontSize" [style.color]="componentData.color">{{componentData.labelValue}}</label>
+            <div class="col-md-9" [style.textAlign]="componentData.textAlign">
+                <ng-select [allowClear]="true" [active]="[selectedOption]" (selected)="selectedValue($event)" [items]="componentData.options" placeholder="Select a Country">
+                </ng-select>
+                <div [hidden]="hideMsg"> <small class="text-danger pl-0">{{componentData.validationMsg}}</small></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- SPECIAL CASE SELECT AND INPUT TEMPLATE -->
+    <div *ngIf="componentType == 'bi-select-input'">
+        <div class="form-group row" [style.margin.px]="componentData.margin" [style.padding.px]="componentData.padding">
+            <label class="col-md-3 form-control-label" for="text-input" [style.textAlign]="componentData.textAlign" [style.fontFamily]="componentData.fontFamily" [style.fontWeight]="componentData.fontWeight" [style.fontSize.px]="componentData.fontSize" [style.color]="componentData.color">{{componentData.labelValue}}</label>
+            <div class="col-md-9" [style.textAlign]="componentData.textAlign">
+                <div [hidden]="isOtherCountry">
+                    <select #specialCaseValidation="ngModel" (blur)="saveInCacheMemory()" [(ngModel)]="componentData.defaultInputValue" name="select" class="form-control" size="1" [disabled]="componentData.disabled">
+                        <option *ngFor="let option of componentData.options | keys" [selected]="option.name == selectedOption">{{option.names}}</option>
+                    </select>
+                    <div [hidden]="hideMsg"> <small *ngIf="!specialCaseValidation.value" class="text-danger pl-0">{{componentData.validationMsg}}</small></div>
+                </div>
+                <div [hidden]="!isOtherCountry">
+                    <input #specialCaseValidation="ngModel" (blur)="saveInCacheMemory()" [(ngModel)]="componentData.defaultInputValue" [type]="typeOfTemplate" class="form-control" [required]="componentData.require" [disabled]="componentData.disabled" [tooltip]="componentData.tooltip"
+                        [placement]="componentData.tooltipOrientation" [placeholder]="componentData.placeHolder" [value]="componentData.defaultInputValue" />
+                    <div [hidden]="hideMsg"> <small *ngIf="!specialCaseValidation.value" class="text-danger pl-0">{{componentData.validationMsg}}</small></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- DROPDOWN TEMPLATE -->
+    <div *ngIf="componentType == 'bi-dropdown'">
+        <div class="form-group row" [style.margin.px]="componentData.margin" [style.padding.px]="componentData.padding">
+            <label class="col-md-3 form-control-label" for="text-input" [style.textAlign]="componentData.textAlign" [style.fontFamily]="componentData.fontFamily" [style.fontWeight]="componentData.fontWeight" [style.fontSize.px]="componentData.fontSize" [style.color]="componentData.color">{{componentData.labelValue}}</label>
+            <div class="col-md-9 dropup" [style.textAlign]="componentData.textAlign">
+                <div class="btn-group" dropdown [isDisabled]="componentData.disabled">
+                    <button dropdownToggle type="button" class="btn btn-primary dropdown-toggle">{{selectedOption}} <span class="caret"></span></button>
+                    <ul *dropdownMenu class="dropdown-menu" role="menu">
+                        <li role="menuitem" *ngFor="let option of componentData.options  | keys">
+                            <a class="dropdown-item" (click)="changeOption(option.names, option.values)">{{option.names}}</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div [hidden]="hideMsg"> <small *ngIf="selectedOption === 'Select Profession/Occupation'" class="text-danger pl-0">this field is required</small></div>
+    </div>
+
+    <!-- BUTTON TEMPLATE -->
+    <div *ngIf="componentType == 'bi-button' || componentType == 'bi-help'" [style.textAlign]="componentData.textAlign">
+        <!--<div class="biFooter">-->
+        <span *ngFor="let buttonOption of componentData.options | keys">
+            <button type="submit" [class]="componentData.class" [disabled]="componentData.disabled" (click)="buttonClicked(buttonOption.names,buttonOption.values);">
+                <bi-input-icon *ngIf="componentData.iconInputOrientation == 'left'" [icon]="biInputIcon" ></bi-input-icon>
+                 {{buttonOption.names}}
+                <bi-input-icon *ngIf="componentData.iconInputOrientation == 'right'" [icon]="biInputIcon" ></bi-input-icon>
+            </button>
+        </span>
+        <!--</div>-->
+    </div>
+
+    <!-- HELP BUTTON TEMPLATE -->
+    <div *ngIf="componentType == 'bi-help'" [style.textAlign]="componentData.textAlign">
+        <div class="btn-group" role="group" aria-label="Button group" style="float:right;">
+            <button (click)="helpModal.show()" type="button" [class]="componentData.class">
+                <bi-input-icon [icon]="biInputIcon" ></bi-input-icon>
+            </button>
+        </div>
+    </div>
+</div>
+
+<!-- HELP BUTTON MODAL TEMPLATE -->
+<div [style.left.px]="leftPosition" [style.top.px]="topPosition" bsModal #helpModal="bs-modal" class="modal " tabindex="-1" role="dialog" aria-labelledby="biFormModalSettingsLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content" [style.overflow]="'scroll'">
+            <div class="modal-header">
+                <h5 class="modal-title">Page Instructions</h5>
+            </div>
+            <div class="modal-body">
+                <div [innerHTML]="componentData.defaultInputValue"></div>
+            </div>
+            <!-- Footer -->
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" (click)="helpModal.hide()">Close</button>
+            </div>
+        </div>
+        <!-- /.modal-content -->
+    </div>
+    <!-- /.modal-dialog -->
+</div>
+<!-- /.modal -->
+
+<!-- MODAL TEMPLATE -->
+<div [style.left.px]="leftPosition" [style.top.px]="topPosition" bsModal #biFormModalSettings="bs-modal" class="modal " tabindex="-1" role="dialog" aria-labelledby="biFormModalSettingsLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content" [style.overflow]="'scroll'" [style.maxHeight.px]='480' [style.width.px]="800">
+            <div class="modal-body">
+
+                <!-- LABEL CARD -->
+                <div class="card">
+                    <div class="card-header" (click)="collapseLabel = !collapseLabel;">
+                        <h5 class="mb-0">
+                            Label Component
+                        </h5>
+                    </div>
+                    <div class="card-block" [collapse]="collapseLabel">
+                        <!-- Label Value -->
+                        <div class="row">
+                            <label class="col-md-6" style="font-size:12px;">Label Value:</label>
+                            <label class="col-md-6" style="font-size:12px;">Anchor Source:</label>
+                        </div>
+                        <div class="row" [style.marginBottom.px]="15">
+                            <div class="col-md-6">
+                                <input type="text" class="offset-md-1" placeholder="label text" [(ngModel)]="componentData.labelValue" />
+                            </div>
+                            <div class="col-md-6">
+                                <input type="text" class="offset-md-1" placeholder="anchor source" [(ngModel)]="componentData.defaultInputValue" />
+                            </div>
+                        </div>
+
+                        <!-- Text Align Value-->
+                        <div class="row">
+                            <label class="col-md-4" style="font-size:12px;">Alignment:</label><br>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6 btn-group" style="margin-left:4%;" aria-label="Basic example">
+                                <button type="button" class="btn btn-secondary" (click)="componentData.textAlign = 'left'">Left</button>
+                                <button type="button" class="btn btn-secondary" (click)="componentData.textAlign = 'center'">Center</button>
+                                <button type="button" class="btn btn-secondary" (click)="componentData.textAlign = 'right'">Right</button>
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+
+                <!-- INPUT CARD -->
+                <div class="card">
+                    <div class="card-header" (click)="collapseInput = !collapseInput;">
+                        <h5 class="mb-0">
+                            Input Component
+                        </h5>
+                    </div>
+                    <div class="card-block" [collapse]="collapseInput">
+
+                        <!-- Disabled, Require and Validation Values -->
+                        <div class="row" [style.marginBottom.px]="15">
+                            <div class="col-md-4">
+                                <input type="checkbox" [(ngModel)]="componentData.disabled" /> Disable
+                            </div>
+                            <div class="col-md-4">
+                                <input type="checkbox" [(ngModel)]="componentData.require" /> Require
+                            </div>
+                            <div class="col-md-4">
+                                <input type="checkbox" [(ngModel)]="componentData.validation" /> Validate
+                            </div>
+                        </div>
+
+
+                        <!-- Placeholder & Options Values -->
+                        <div class="row">
+                            <label class="col-md-6" style="font-size:12px;">Placeholder:</label>
+                            <label class="col-md-6" style="font-size:12px;">Options:</label>
+                        </div>
+
+                        <div class="row" [style.marginBottom.px]="15">
+
+                            <div class="col-md-6">
+                                <input type="text" class="offset-md-1" placeholder="placeholder text" [(ngModel)]="componentData.placeHolder" />
+                            </div>
+                            <div class="col-md-6">
+                                <input type="text" class="offset-md-1" [disabled]="componentData.hasConstraint" placeholder="Options" [(ngModel)]="componentData.options" (click)="changeOptionValues(componentData.options)" />
+                            </div>
+
+                        </div>
+
+                        <!-- Tooltip Value and Orientations -->
+                        <div class="row">
+                            <label class="col-md-6" style="font-size:12px;">Tooltip:</label>
+                            <label class="col-md-6" style="font-size:12px;">Orientation:</label>
+                        </div>
+
+                        <div class="row" [style.marginBottom.px]="10">
+
+                            <div class="col-md-6">
+                                <input type="text" class="offset-md-1" placeholder="tooltip text" [(ngModel)]="componentData.tooltip" />
+                            </div>
+                            <div class="col-md-6">
+                                <div class="btn-group offset-md-1" dropdown>
+                                    <button dropdownToggle type="button" class="btn btn-primary dropdown-toggle">
+                                        {{componentData.tooltipOrientation}} <span class="caret"></span>
+                                    </button>
+                                    <ul *dropdownMenu class="dropdown-menu" role="menu">
+                                        <li role="menuitem"><a class="dropdown-item" (click)="componentData.tooltipOrientation = 'left'">left</a></li>
+                                        <li role="menuitem"><a class="dropdown-item" (click)="componentData.tooltipOrientation = 'top'">top</a></li>
+                                        <li role="menuitem"><a class="dropdown-item" (click)="componentData.tooltipOrientation = 'bottom'">bottom</a></li>
+                                        <li role="menuitem"><a class="dropdown-item" (click)="componentData.tooltipOrientation = 'right'">right</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- STYLE CARD -->
+                <div class="card">
+                    <div class="card-header" (click)="collapseStyle = !collapseStyle">
+                        <h5 class="mb-0">
+                            Style
+                        </h5>
+                    </div>
+                    <div class="card-block" [collapse]="collapseStyle">
+
+                        <!-- Font Size, Family and Weight Values-->
+                        <div class="row">
+                            <label class="col-md-4" style="font-size:12px;">Font Size: {{componentData.fontSize}}</label>
+                            <label class="col-md-4" style="font-size:12px;">Font Family:</label>
+                            <label class="col-md-4" style="font-size:12px;">Font Weight:</label>
+                        </div>
+
+                        <div class="row" [style.marginBottom.px]="15" [style.marginLeft.px]="15">
+                            <div class="col-md-4">
+                                <input type="range" [(ngModel)]="componentData.fontSize" />
+                            </div>
+                            <div class="col-md-4">
+                                <input type="text" placeholder="Font Family" [(ngModel)]="componentData.fontFamily" />
+                            </div>
+                            <div class="col-md-4">
+                                <div class="btn-group" dropdown>
+                                    <button dropdownToggle type="button" class="btn btn-primary dropdown-toggle">
+                                        {{componentData.fontWeight}} <span class="caret"></span>
+                                    </button>
+                                    <ul *dropdownMenu class="dropdown-menu" role="menu">
+                                        <li role="menuitem"><a class="dropdown-item" (click)="componentData.fontWeight = 'bold'">bold</a></li>
+                                        <li role="menuitem"><a class="dropdown-item" (click)="componentData.fontWeight = '100'">100 (None)</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Width & Height Values -->
+                        <div class="row">
+                            <label class="col-md-6" style="font-size:12px;">Width: {{componentData.width}}</label>
+                            <label class="col-md-6" style="font-size:12px;">Height: {{componentData.height}}</label>
+                        </div>
+
+                        <div class="row" [style.marginBottom.px]="15">
+                            <div class="col-md-6">
+                                <input type="range" class="offset-md-1" [(ngModel)]="componentData.width" />
+                            </div>
+                            <div class="col-md-6">
+                                <input type="range" class="offset-md-1" [(ngModel)]="componentData.height" />
+                            </div>
+                        </div>
+
+                        <!-- Margin & Padding Values -->
+                        <div class="row">
+                            <label class="col-md-6" style="font-size:12px;">Margin: {{componentData.margin}}</label>
+                            <label class="col-md-6" style="font-size:12px;">Padding: {{componentData.padding}}</label>
+                        </div>
+
+                        <div class="row" [style.marginBottom.px]="15">
+                            <div class="col-md-6">
+                                <input type="range" class="offset-md-1" [(ngModel)]="componentData.margin" />
+                            </div>
+                            <div class="col-md-6">
+                                <input type="range" class="offset-md-1" [(ngModel)]="componentData.padding" />
+                            </div>
+                        </div>
+
+                        <!-- Color Value-->
+                        <div class="row">
+                            <label class="col-md-4" style="font-size:12px;">Color:</label>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6" style="margin-left:4%;">
+                                <input type="color" [(ngModel)]="componentData.color" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <!-- Footer -->
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" (click)="biFormModalSettings.hide()">Close</button>
+                <!--<button type="button" (click)="onSave(inputValue)" class="btn btn-primary">Save changes</button>-->
+            </div>
+        </div>
+        <!-- /.modal-content -->
+    </div>
+    <!-- /.modal-dialog -->
+</div>
+<!-- /.modal -->

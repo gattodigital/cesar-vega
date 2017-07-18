@@ -1,0 +1,9 @@
+
+    <div [class]="appType" [hidden]="hideBody">       
+        <div [class]="containerType">
+
+            <router-outlet (updatedData)="inputValue = $event">{{inputValue}}</router-outlet>
+            <!-- /.conainer-fluid -->
+            </div>       
+    </div>
+   

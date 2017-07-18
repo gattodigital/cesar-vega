@@ -1,0 +1,42 @@
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>gems | One Page</title>
+    <!-- Plugins CSS -->
+    <link href="./assets/html/css/plugins/plugins.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link href="./assets/html/css/style.css" rel="stylesheet">
+</head>
+
+<div class="extra-services pt90 pb90 bg-parallax" data-jarallax='{"speed": 0.2}' [style.background]="'url('+sectionFiveImage+')'">
+    <div class="extra-service-bg mb60">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-4 mb30">
+                    <h2 class=" wow fadeInLeft" data-wow-delay=".2s" data-wow-duration=".3s">
+                        {{sectionFiveTitle}}
+                    </h2>
+                </div>
+                <!--/.col-->
+                <div *ngFor="let item of sectionFiveCards" class="col-md-4 mb30">
+                    <div class="media">
+                        <div class="d-flex mr-3">
+                            <i [class]="item.icon"></i>
+                        </div>
+                        <div class="media-body">
+                            <h4 class="mt-0">{{item.title}}</h4>
+                            {{item.paragraph}}
+                        </div>
+                    </div>
+                </div>
+                <!--/.col-->
+            </div>
+            <!--/.row-->
+
+        </div>
+    </div>
+    <div class="mb30 text-center container">
+        <a href="#" class="btn btn-lg btn-primary">{{sectionFiveButtonOne}}</a>
+    </div>
+</div>

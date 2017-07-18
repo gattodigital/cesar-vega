@@ -1,0 +1,439 @@
+
+
+
+<div [hidden]="true" id="preloader">
+    <div id="preloader-inner"></div>
+</div>
+<!--/preloader-->
+
+<nav class="navbar navbar-toggleable-md navbar-light bg-faded">
+    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+    <a class="navbar-brand" href="#/brandapp"><img src="./assets/html/images/logo-dark.png" alt="logo"></a>
+    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item"><a data-scroll class="nav-link active" href="#home">Home</a></li>
+            <li class="nav-item"><a data-scroll class="nav-link" href="#about">About</a></li>
+            <li class="nav-item"><a data-scroll class="nav-link" href="#services">Services</a></li>
+            <li class="nav-item"><a data-scroll class="nav-link" href="#folio">Portfolio</a></li>
+            <li class="nav-item"><a data-scroll class="nav-link" href="#news">Journal</a></li>
+            <li class="nav-item"><a data-scroll class="nav-link" href="#contact">Contact</a></li>
+            <li class="nav-item dropdown">
+                <span class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Extras
+                        </span>
+                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
+                    <a class="dropdown-item" href="index.html">Original</a>
+                    <a class="dropdown-item" href="index-alt.html">Original alt</a>
+                    <a class="dropdown-item" href="index-agency.html">Minimal Agency</a>
+                    <a class="dropdown-item" href="index-vimeo.html">vimeo video</a>
+                    <a class="dropdown-item" href="index-youtube.html">Youtube video</a>
+                    <a class="dropdown-item" href="index-offcanvas.html">Offcanvas Nav</a>
+                    <a class="dropdown-item" href="journal.html">journal</a>
+                    <a class="dropdown-item" href="journal-detail.html">journal Detail</a>
+                    <a class="dropdown-item" href="project-single.html">Portfolio Detail</a>
+                    <a class="dropdown-item" href="typography.html">Typography</a>
+                </div>
+            </li>
+            <li class="nav-item"><a class="nav-link bg-primary btn-rounded" href="#">Buy Now</a></li>
+        </ul>
+    </div>
+</nav>
+<!--/.navbar-->
+
+
+<div *ngIf="sectionOneData">
+    <section-one [sectionOneData]="sectionOneData"></section-one>
+</div>
+
+<div *ngIf="sectionTwoData">
+    <section-two [sectionTwoData]="sectionTwoData"></section-two>
+</div>
+
+<div *ngIf="sectionThreeData">
+    <section-three [sectionThreeData]="sectionThreeData"></section-three>
+</div>
+
+<div *ngIf="sectionFourData">x
+    <section-four [sectionFourData]="sectionFourData"></section-four>
+</div>
+
+<div *ngIf="sectionFiveData">
+    <section-five [sectionFiveData]="sectionFiveData"></section-five>
+</div>
+
+<div *ngIf="sectionSixData">
+    <section-six [sectionSixData]="sectionSixData"></section-six>
+</div>
+
+<div *ngIf="sectionSevenData">
+    <section-seven [sectionSevenData]="sectionSevenData"></section-seven>
+</div>
+
+<div *ngIf="sectionEightData">
+    <section-eight [sectionEightData]="sectionEightData"></section-eight>
+</div>
+
+<div *ngIf="sectionNineData">
+    <section-nine [sectionNineData]="sectionNineData"></section-nine>
+</div>
+
+<div *ngIf="sectionTenData">
+    <section-ten [sectionTenData]="sectionTenData"></section-ten>
+</div>
+
+<div *ngIf="sectionElevenData">
+    <section-eleven [sectionElevenData]="sectionElevenData"></section-eleven>
+</div>
+
+<!--<section id="news" class="pt90 pb60">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8 col-lg-6 offset-md-2 offset-lg-3">
+                <div class="section-title">
+                    <h4>From Journal</h4>
+                    <p class="lead">libero ex dapibus diam expound the actual teachings of the great explorer of the truth</p>
+                </div>
+            </div>
+        </div>
+        <div class='owl-row'>
+            <div class="owl-news owl-theme owl-carousel">
+                <div class="item">
+                    <div class='post-card'>
+                        <div class='post-thumb mb20'>
+                            <a href='post-detail.html'>
+                                <img src='./assets/html/images/img1.jpg' alt='' class='img-fluid'>
+                            </a>
+                        </div>
+                        <div class='post-meta'>
+                            <h4><a href='#'>Great color combination</a></h4>
+                        </div>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                        </p>
+                        <div class='text-right'>
+                            <a href='post-detail.html' class='btn btn-link'>Read More</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class='post-card'>
+                        <div class='post-thumb mb20'>
+                            <a href='post-detail.html'>
+                                <img src='./assets/html/images/img2.jpg' alt='' class='img-fluid'>
+                            </a>
+                        </div>
+                        <div class='post-meta'>
+                            <h4><a href='#'>Enjoy your free time</a></h4>
+                        </div>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                        </p>
+                        <div class='text-right'>
+                            <a href='post-detail.html' class='btn btn-link'>Read More</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class='post-card'>
+                        <div class='post-thumb mb20'>
+                            <a href='post-detail.html'>
+                                <img src='./assets/html/images/img3.jpg' alt='' class='img-fluid'>
+                            </a>
+                        </div>
+                        <div class='post-meta'>
+                            <h4><a href='#'>Beautiful watch with gems</a></h4>
+                        </div>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                        </p>
+                        <div class='text-right'>
+                            <a href='post-detail.html' class='btn btn-link'>Read More</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class='post-card'>
+                        <div class='post-thumb mb20'>
+                            <a href='post-detail.html'>
+                                <img src='./assets/html/images/img2.jpg' alt='' class='img-fluid'>
+                            </a>
+                        </div>
+                        <div class='post-meta'>
+                            <h4><a href='#'>Enjoy your free time</a></h4>
+                        </div>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                        </p>
+                        <div class='text-right'>
+                            <a href='post-detail.html' class='btn btn-link'>Read More</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class='post-card'>
+                        <div class='post-thumb mb20'>
+                            <a href='post-detail.html'>
+                                <img src='./assets/html/images/img3.jpg' alt='' class='img-fluid'>
+                            </a>
+                        </div>
+                        <div class='post-meta'>
+                            <h4><a href='#'>Beautiful watch with gems</a></h4>
+                        </div>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                        </p>
+                        <div class='text-right'>
+                            <a href='post-detail.html' class='btn btn-link'>Read More</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class='post-card'>
+                        <div class='post-thumb mb20'>
+                            <a href='post-detail.html'>
+                                <div class="embed-responsive embed-responsive-16by9">
+                                    <iframe class='embed-responsive-item' src="https://player.vimeo.com/video/79293746" width="730" height="319" allowfullscreen></iframe></div>
+                            </a>
+                        </div>
+                        <div class='post-meta'>
+                            <h4><a href='#'>Post with vimeo video</a></h4>
+                        </div>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                        </p>
+                        <div class='text-right'>
+                            <a href='post-detail.html' class='btn btn-link'>Read More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>-->
+<!--/ Journal-->
+
+<div *ngIf="sectionTwelveData">
+    <section-twelve [sectionTwelveData]="sectionTwelveData"></section-twelve>
+</div>
+
+<!--<div class='testimonials bg-parllax parallax-overlay sectionDark pt90 pb60' data-jarallax='{"speed": 0.2}' style='background-image: url("./assets/html/images/bg2.jpg")'>
+    <div class='container'>
+        <div class="row">
+            <div class="col-md-8 col-lg-6 offset-md-2 offset-lg-3">
+                <div class="section-title">
+                    <h4>Customer Reviews</h4>
+                    <p class="lead">libero ex dapibus diam expound the actual teachings of the great explorer of the truth</p>
+                </div>
+            </div>
+        </div>
+        <div class='owl-feedback owl-carousel owl-theme'>
+            <div class='item'>
+                <div class='row align-items-center'>
+                    <div class='col-md-2 offset-md-1'>
+                        <img src='./assets/html/images/team-1.jpg' alt='' class='rounded-circle img-fluid' width='120'>
+                    </div>
+                    <div class='col-md-8'>
+                        <p class='lead'>
+                            " Praesent sodales, quam vitae gravida interdum, ex mi bibendum enim, sit amet tristique mi quam vel odio. Donec non nunc condimentum, hendrerit elit sed, condimentum magna. Suspendisse imperdiet purus vel ornare cursus. "
+                        </p>
+                        <h4 class="text-uppercase mb5">Emily Doe</h4>
+                        <em>Gems customers</em>
+                    </div>
+                </div>
+            </div>
+            <div class='item'>
+                <div class='row align-items-center'>
+                    <div class='col-md-2 offset-md-1'>
+                        <img src='./assets/html/images/team-2.jpg' alt='' class='rounded-circle img-fluid' width='120'>
+                    </div>
+                    <div class='col-md-8'>
+
+                        <p class='lead'>
+                            " Praesent sodales, quam vitae gravida interdum, ex mi bibendum enim, sit amet tristique mi quam vel odio. Donec non nunc condimentum, hendrerit elit sed, condimentum magna. Suspendisse imperdiet purus vel ornare cursus. "
+                        </p>
+                        <h4 class="text-uppercase mb5">Emily Doe</h4>
+                        <em>Gems customers</em>
+                    </div>
+                </div>
+            </div>
+            <div class='item'>
+                <div class='row align-items-center'>
+                    <div class='col-md-2 offset-md-1'>
+                        <img src='./assets/html/images/team-3.jpg' alt='' class='rounded-circle img-fluid' width='120'>
+                    </div>
+                    <div class='col-md-8'>
+
+                        <p class='lead'>
+                            " Praesent sodales, quam vitae gravida interdum, ex mi bibendum enim, sit amet tristique mi quam vel odio. Donec non nunc condimentum, hendrerit elit sed, condimentum magna. Suspendisse imperdiet purus vel ornare cursus. "
+                        </p>
+                        <h4 class="text-uppercase mb5">Emily Doe</h4>
+                        <em>Gems customers</em>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>-->
+<!--/ Testimonials-->
+
+
+<div *ngIf="sectionThirteenData">
+    <section-thirteen [sectionThirteenData]="sectionThirteenData"></section-thirteen>
+</div>
+
+<!--<section id="contact" class="pt90 pb60 bg-faded">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8 col-lg-6 offset-md-2 offset-lg-3">
+                <div class="section-title">
+                    <h4>Contact Us</h4>
+                    <p class="lead">libero ex dapibus diam expound the actual teachings of the great explorer of the truth</p>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6 mb30">
+                <iframe height="380" frameborder="0" style="border:0;width:100%;" class="mb0" src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJWalJ2wO6j4AR4A9dNSj2ATI&key=AIzaSyAcC0a6iry-BDvy1LA4EFqlvKBGTdZELJA
+                                " allowfullscreen></iframe>
+            </div>
+            <div class="col-md-6">
+                <h4 class="text-uppercase">Say Hello!</h4>
+                <hr>
+                <form method="post" action="#" class="gems-contact">
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <div class=" mb20">
+                                <input type="text" name="name" class="form-control" placeholder="Full Name...." />
+                            </div>
+                            <div class=" mb20">
+                                <input type="text" name="email" class="form-control" placeholder="Email Address...." />
+                            </div>
+                        </div>
+                        <div class="col-sm-12">
+                            <textarea name="message" class="form-control mb20" rows="5" placeholder="Message...."></textarea>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-12 text-center">
+                            <div class="data-status"></div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-12 text-right">
+                            <button type="submit" name="submit" class="btn btn-lg btn-primary">Send Message</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+    </div>
+</section>-->
+<!--/.contact-->
+
+<div *ngIf="sectionFourteenData">
+    <section-fourteen [sectionFourteenData]="sectionFourteenData"></section-fourteen>
+</div>
+
+<!--<div class="bg-primary contact-info pt50 pb20">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4 mb30">
+                <div class="media">
+                    <div class="d-flex mr-3">
+                        <i class="ti-home"></i>
+                    </div>
+                    <div class="media-body">
+                        <h5 class="mt-0">Address</h5>
+                        124, Munna Wali, Lorem Street<br> Sydney, Australia<br>302012
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb30">
+                <div class="media">
+                    <div class="d-flex mr-3">
+                        <i class="ti-headphone"></i>
+                    </div>
+                    <div class="media-body">
+                        <h5 class="mt-0">Phone & fax</h5>
+                        +01 12 301 963<br> +01 33 399 939
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb30">
+                <div class="media">
+                    <div class="d-flex mr-3">
+                        <i class="ti-email"></i>
+                    </div>
+                    <div class="media-body">
+                        <h5 class="mt-0">Email & website</h5>
+                        support@gems.com<br> www.gemsagency.new
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>-->
+<!--/.contact-info-->
+
+
+<div *ngIf="sectionFifteenData">
+    <section-fifteen [sectionFifteenData]="sectionFifteenData"></section-fifteen>
+</div>
+
+<!--<div class="bottom-links container-fluid">
+    <div class="row align-items-center">
+        <a class="col-md-6 links-col bg-dark wow zoomIn" data-wow-delay=".2s" data-wow-duration=".3s" href="#">
+            <span class="text-uppercase">Plan a Project</span> Hire us
+        </a>
+        <a class="col-md-6 links-col secondary-col wow zoomIn" data-wow-delay=".4s" data-wow-duration=".5s" href="#">
+            <span class="text-uppercase">Work with us</span> Join the team
+        </a>
+    </div>
+</div>-->
+<!--/.bottom links-->
+
+
+<div *ngIf="sectionSixteenData">
+    <section-sixteen [sectionSixteenData]="sectionSixteenData"></section-sixteen>
+</div>
+
+<!--<footer id="footer" class="footer  pt90 pb90">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <ul class="list-inline">
+                    <li class="list-inline-item">
+                        <a href="#"><i class="ti-facebook"></i></a>
+                    </li>
+                    <li class="list-inline-item">
+                        <a href="#"><i class="ti-twitter"></i></a>
+                    </li>
+                    <li class="list-inline-item">
+                        <a href="#"><i class="ti-google"></i></a>
+                    </li>
+                    <li class="list-inline-item">
+                        <a href="#"><i class="ti-instagram"></i></a>
+                    </li>
+                    <li class="list-inline-item">
+                        <a href="#"><i class="ti-dribbble"></i></a>
+                    </li>
+                    <li class="list-inline-item">
+                        <a href="#"><i class="ti-linkedin"></i></a>
+                    </li>
+                </ul>
+                <span>&copy; Copyright 2020. All Right Reserved. GEMS</span>
+            </div>
+        </div>
+    </div>
+</footer>-->
+<!--back to top-->
+
+
+<a href="#" class="back-to-top hidden-xs-down" id="back-to-top"><i class="ti-angle-up"></i></a>
+<!-- jQuery first, then Tether, then Bootstrap JS. -->
+<script src="./assets/html/js/plugins/plugins.js"></script>
+<script src="./assets/html/js/gems.custom.js"></script>
+<script src="./assets/html/jarallax/jarallax.js"></script>

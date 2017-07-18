@@ -1,0 +1,36 @@
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>gems | One Page</title>
+    <!-- Plugins CSS -->
+    <link href="./assets/html/css/plugins/plugins.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link href="./assets/html/css/style.css" rel="stylesheet">
+</head>
+
+<div class="pt90 pb60 bg-faded">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8 col-lg-6 offset-md-2 offset-lg-3">
+                <div class="section-title">
+                    <h4>{{sectionNineTitle}}</h4>
+                    <p class="lead">{{sectionNineDescription}}</p>
+                </div>
+            </div>
+        </div>
+        <!--/section title-->
+        <div class="row process-row">
+            <div *ngFor="let item of sectionNineCards" class="col-lg-3 col-md-6 mb30 text-center">
+                <div class="process-icon mb20">
+                    <i [class]="item.icon"></i>
+                </div>
+                <!--/icon-->
+                <h4 class="text-uppercase">{{item.title}}</h4>
+                <p>{{item.paragraph}}</p>
+            </div>
+            <!--/col-->
+        </div>
+    </div>
+</div>
+<!--/process-->

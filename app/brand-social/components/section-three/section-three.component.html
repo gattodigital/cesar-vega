@@ -1,0 +1,29 @@
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>gems | One Page</title>
+    <!-- Plugins CSS -->
+    <link href="./assets/html/css/plugins/plugins.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link href="./assets/html/css/style.css" rel="stylesheet">
+</head>
+
+<div class="parallax-cta pt90 pb60 bg-parallax" data-jarallax='{"speed": 0.2}' [style.background]="'url('+sectionThreeImage+')'">
+    <div class="container">
+        <div class="row">
+            <div *ngFor="let item of sectionThree" class="col-lg-3 col-md-6 mb30 wow fadeIn" data-wow-duration=".5s" data-wow-delay=".2s">
+                <div class="media fun-facts">
+                    <div class="d-flex align-self-center mr-4">
+                        <i [class]='item.icon'></i>
+                    </div>
+                    <div class="media-body">
+                        <h3 class="mt-0 text-uppercase display-4 text-white">{{item.title}}</h3>
+                        <p class='mb0 text-small text-uppercase'>{{item.description}}</p>
+                    </div>
+                </div>
+            </div>
+            <!--/col-->
+        </div>
+    </div>
+</div>

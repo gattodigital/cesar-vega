@@ -1,0 +1,25 @@
+/*
+Footer style
+*/
+.footer{
+    background: #333;
+    a{
+        color: #fff;
+        background: rgba(#000,.2);
+          display: block;
+           border-radius: 50%;
+        i{
+          width: 36px;
+          height: 36px;
+          line-height: 36px;
+         
+           display: block;
+        }
+        &:hover{
+          background: rgba(#000,1);  
+        }
+    }
+    span{
+        color: rgba(#fff,.6);
+    }
+}

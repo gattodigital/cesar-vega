@@ -1,0 +1,53 @@
+<div class="form-group">
+    <div class="card" [style.padding.em]="2" style="min-height: 700px;">
+        <!--<div class="card-header">
+<form class="form-inline form-horizontal">
+<div *ngFor="let item of icons; let i = index">
+<button title="{{ item.name }}">
+<i style="padding: 10px" class="{{item.icon}}" (click)="createComponent($event,i)"></i>
+</button>
+</div>
+</form>
+</div>-->
+
+        <div class="btn-group" role="group" aria-label="Button group">
+            <div class="row justify-content-center">
+                <button type="button" class="btn btn-link">
+                    <img style="height:40px" [src]="'./assets/img/logo.png'" alt="Avatar">
+                </button>
+                <button type="button" class="btn btn-link">
+                    <strong>Panel Members Registration</strong>
+                    <div class="text-muted"><small>Welcome, Please fill up the blanks</small></div>
+                </button>
+            </div>
+        </div>
+        <div class="row justify-content-between" style="padding-bottom: 20px">
+            <div class="nav-item " *ngFor="let wizardStep of wizardSteps; let i = index;" 
+            [class.active]="wizardStep.active" 
+            [class.default]="wizardStep.default" 
+            [class.visited]="wizardStep.visited" 
+            [style.width]="wizardStepWidth">
+                <h6 [style.textAlign]="'center'" 
+                [class.stepBold]="wizardStep.active">
+                    {{wizardStep.step}}
+                </h6>
+            </div>
+        </div>
+
+        <!-- VERSION CONTROL GLOBAL TOGGLER -->
+        <!--<div *ngIf="loggedIn == 'admin' && biFormComponentDataArray.versionControl != ''" class="row justify-content-end" [style.marginRight.px]="10">
+            <button class="fa fa-history" (click)="toggleVersionControl()" [style.marginBottom.px]="15"></button>
+        </div>-->
+
+        <form #formRef="ngForm" class="form-horizontal" id="cvega">
+            <div *ngFor="let componentData of biFormComponentDataArray">
+                <fieldset>
+                    <bi-form-components [hideVersionControl]="hideVersionControl" [hideMsg]="hideMsg" (updateIfOtherCountry)="handleOtherCountryUpdate($event)" (addStyleFirstPageHelp)="handleHelpStyle($event)" [ifOtherCountry]="changedCountry" (updatePage)="onSubmit($event)"
+                        [sortOrder]="componentData.sortOrder" [componentId]="componentData.componentId" [componentType]="componentData.componentType" [componentData]="componentData">
+                    </bi-form-components>
+                </fieldset>
+            </div>
+        </form>
+        <toaster-container [toasterconfig]="toasterconfig"></toaster-container>
+    </div>
+</div>

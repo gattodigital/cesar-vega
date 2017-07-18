@@ -1,0 +1,56 @@
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>gems | One Page</title>
+    <!-- Plugins CSS -->
+    <link href="./assets/html/css/plugins/plugins.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link href="./assets/html/css/style.css" rel="stylesheet">
+</head>
+
+<section id="folio" class="bg-parllax sectionDark pt100 pb70" data-jarallax='{"speed": 0.2}' style='background-image: url("https://image.shutterstock.com/z/stock-photo-frame-blank-advertisement-message-abstract-concept-413674186.jpg")'>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8 col-lg-6 offset-md-2 offset-lg-3">
+                <div class="section-title">
+                    <h4>{{sectionSevenTitle}}</h4>
+                    <p class="lead">{{sectionSevenDescription}}</p>
+                </div>
+            </div>
+        </div>
+        <!--/section title-->
+        <ul class="filter-list list-inline margin-b-40 text-center">
+            <li *ngFor="let item of sectionSevenList" class="is-checked">{{item}}</li>
+        </ul>
+
+        <div class="row filter-row popup-row">
+            <div *ngFor="let item of sectionSevenCards" class="design col-md-4 col-sm-6 col-lg-3 mb30 filter-item">
+                <div class="work-card">
+                    <img src="./assets/html/images/w1.jpg" alt="" class="img-fluid">
+                    <div class="work-overlay">
+                        <div class="overlay-content">
+                            <div>
+                                <h4>{{item.title}}</h4>
+                                <em>{{item.paragraph}}</em>
+                            </div>
+                            <a *ngFor="let buttonIcon of item.footerButtons" class="popup-gallery" href="./assets/html/images/w1.jpg">
+                                <i [class]="buttonIcon.icon"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--end col-->
+        </div>
+        <div class="text-center pt40">
+            <h4 class="text-uppercase text-white">
+                The most features rich one page template on the market.
+            </h4>
+        </div>
+    </div>
+    <!--./container-->
+</section>
+<!--folio-->
+
+<!--/team-->

@@ -1,0 +1,23 @@
+
+    <header-iframe  [hidden]="hideHeader"></header-iframe>
+    <div [class]="appType" [hidden]="hideBody">
+        <left-menu-iframe [hidden]="hideLeftMenu"></left-menu-iframe>
+        <!-- Main content -->
+        <main class="main" >
+            <!-- Breadcrumb -->
+            <ol class="breadcrumb mb-0 hidden-md-down" >
+            <breadcrumbs></breadcrumbs>        
+        </ol>
+        <div [class]="containerType">
+            <router-outlet (updatedData)="inputValue = $event">{{inputValue}}</router-outlet>
+            <!-- /.conainer-fluid -->
+            </div>
+        </main>
+        <right-menu-iframe [hidden]="false"></right-menu-iframe>
+    </div>
+    <footer class="app-footer" [hidden]="hideFooter">
+        <a href="https://brandinstitute.com">BI</a> &copy; 2017 Brand Institute.
+        <span class="float-right">
+        Powered by <a href="https://brandinstitute.com">IS TEAM</a>
+    </span>
+    </footer>

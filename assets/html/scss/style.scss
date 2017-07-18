@@ -1,0 +1,119 @@
+/*
+Project - gems - one page paraallax bootstrap4
+Author  - Design_mylife
+support URL - mylifedesign143@gmail.com
+*/
+
+/******************
+TABLE OF CONTENT
+
+1 - Font Awesome icons
+2 - Themify icons
+3 - Template Basic typography etc.
+4 - Prelaoder css
+5 - Buttons
+6 - Headers
+7 - Dropdown
+8 - Hero & sliders
+9 - Icons boxes
+10 - Call to actions cta
+11 - Journal
+12 - Portfolio
+13 - Pricing
+14 - Footer
+
+
+x - Responsive css
+******************/
+@font-face {
+    font-family: 'FontAwesome';
+    src: url("../bower_components/font-awesome/fonts/fontawesome-webfont.eot?v=4.7.0");
+    src: url("../bower_components/font-awesome/fonts/fontawesome-webfont.eot?#iefix&v=4.7.0") format('embedded-opentype'),url("../bower_components/font-awesome/fonts/fontawesome-webfont.woff2?v=4.7.0") format('woff2'),url("../bower_components/font-awesome/fonts/fontawesome-webfont.woff?v=4.7.0") format('woff'),url("../bower_components/font-awesome/fonts/fontawesome-webfont.ttf?v=4.7.0") format('truetype'),url("../bower_components/font-awesome/fonts/fontawesome-webfont.svg?v=4.7.0#fontawesomeregular") format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+/*themify icons*/
+@font-face {
+    font-family: 'themify';
+    src: url("../bower_components/themify-icons/fonts/themify.eot");
+    src: url("../bower_components/themify-icons/fonts/themify.eot?#iefix") format('embedded-opentype'),
+        url("../bower_components/themify-icons/fonts/themify.woff") format('woff'),
+        url("../bower_components/themify-icons/fonts/themify.ttf") format('truetype'),
+        url("../bower_components/themify-icons/fonts/themify.svg") format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,700');
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700');
+@import url('https://fonts.googleapis.com/css?family=Merriweather:300,300i,400,400i');
+@import "_variables.scss";
+@import "_template-base.scss";
+@import "_preloader.scss";
+@import "_buttons.scss";
+@import "_headers.scss";
+@import "_dropdown.scss";
+@import "_hero-slider.scss";
+@import "_icons-box.scss";
+@import "_cta.scss";
+@import "_post.scss";
+@import "_portfolio.scss";
+@import "_pricing.scss";
+@import "_footer.scss";
+
+
+/********************
+RESPONSIVE CSS FOR TEMPLATE
+********************/
+@media(max-width:991px){
+    .hero h1{
+        font-size: 2rem;
+        line-height: 2.6rem;
+    }
+    .navbar-inverse.header-transparent,.navbar-inverse.header-transparent.bg-inverse.sticky-header {
+        padding: 0.7rem 1rem;
+        transition: all .3s;
+        -webkit-transition: all .3s;
+        -moz-transition: all .3s;
+        -ms-transition: all .3s;
+        &.bg-inverse{
+            background-color: #292b2c!important;
+        }
+    }
+    .offcanvas-navbar ul{
+        margin-top:16px!important;
+    }
+    .navbar-brand{
+        margin-top:-3px;
+    }
+    .text-title{
+        letter-spacing: 0px;
+        font-size: 1.5rem;
+    }
+    .owl-feedback{
+        &.owl-carousel .owl-item img{
+            width: 120px!important;
+            margin: 0 auto;
+            margin-bottom: 20px;
+        }
+    }
+    .links-col{
+        padding: 50px 15px;
+    }
+    .collapse{
+        height: 280px;
+        margin-top:15px;
+        &.show{
+            overflow-y: scroll;
+        }
+    }
+    .dropdown-menu{
+        margin-bottom: 15px;
+    }
+    .nav-link.bg-primary{
+        margin-left: 0!important;
+    }
+    .tlt.hero-tlt{
+        letter-spacing: 0px;
+        font-size: 2rem;
+    }
+}

@@ -1,0 +1,59 @@
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>gems | One Page</title>
+    <!-- Plugins CSS -->
+    <link href="./assets/html/css/plugins/plugins.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link href="./assets/html/css/style.css" rel="stylesheet">
+</head>
+
+<section id="contact" class="pt90 pb60">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8 col-lg-6 offset-md-2 offset-lg-3">
+                <div class="section-title">
+                    <h4>{{sectionThirteenTitle}}</h4>
+                    <p class="lead">{{sectionThirteenDescription}}</p>
+                </div>
+            </div>
+        </div>
+        <!--/section title-->
+        <div class="row">
+            <div class="col-md-6 mb30">
+                <iframe height="380" frameborder="0" style="border:0;width:100%;" class="mb0" [src]="sectionThirteenMap | safe" allowfullscreen></iframe>
+            </div>
+            <div class="col-md-6">
+                <h4 class="text-uppercase">{{sectionThirteenParagraph}}</h4>
+                <hr>
+                <form method="post" action="#" class="gems-contact">
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <div *ngFor="let item of sectionThirteenCards" class=" mb20">
+                                <input *ngIf="item.paragraph !== 'Message...'" type="text" class="form-control" [placeholder]="item.paragraph" />
+                            </div>
+                        </div>
+                        <div class="col-sm-12">
+                            <textarea name="message" class="form-control mb20" rows="5" [placeholder]="sectionThirteenTextarea.paragraph"></textarea>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-12 text-center">
+                            <div class="data-status"></div>
+                            <!-- data submit status -->
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-12 text-right">
+                            <button type="submit" name="submit" class="btn btn-lg btn-primary">{{sectionThirteenButtonMessage}}</button>
+                        </div>
+                    </div>
+                </form>
+                <!--form end-->
+            </div>
+        </div>
+
+    </div>
+</section>
+<!--/.contact-->

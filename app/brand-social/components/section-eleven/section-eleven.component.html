@@ -1,0 +1,72 @@
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>gems | One Page</title>
+    <!-- Plugins CSS -->
+    <link href="./assets/html/css/plugins/plugins.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link href="./assets/html/css/style.css" rel="stylesheet">
+</head>
+
+<section id="news" class="pt90 pb60">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8 col-lg-6 offset-md-2 offset-lg-3">
+                <div class="section-title">
+                    <h4>{{sectionElevenTitle}}</h4>
+                    <p class="lead">{{sectionElevenDescription}}</p>
+                </div>
+            </div>
+        </div>
+        <!--/section title-->
+        <div class='owl-row'>
+            <div *ngFor="let item of sectionElevenCards" class="owl-news owl-theme owl-carousel">
+                <div *ngIf="item.title !== 'Post with vimeo video'" class="item">
+                    <div class='post-card'>
+                        <div class='post-thumb mb20'>
+                            <a href='post-detail.html'>
+                                <img [src]='item.image' alt='' class='img-fluid'>
+                            </a>
+                        </div>
+                        <!--/.thumb-->
+                        <div class='post-meta'>
+                            <h4><a href='#'>{{item.title}}</a></h4>
+                        </div>
+                        <p>{{item.paragraph}}</p>
+                        <div class='text-right'>
+                            <a href='post-detail.html' class='btn btn-link'>{{item.footerDescription}}</a>
+                        </div>
+                    </div>
+                </div>
+                <!--/.item-->
+            </div>
+            <div class="owl-news owl-theme owl-carousel">
+                <div class="item">
+                    <div class='post-card'>
+                        <div class='post-thumb mb20'>
+                            <a href='post-detail.html'>
+                                <div class="embed-responsive embed-responsive-16by9">
+                                    <iframe class='embed-responsive-item' [src]="sectionElevenVideoCard.image | safe" width="730" height="319" allowfullscreen></iframe>
+                                </div>
+                            </a>
+                        </div>
+                        <!--/.thumb-->
+                        <div class='post-meta'>
+                            <h4><a href='#'>{{sectionElevenVideoCard.title}}</a></h4>
+                        </div>
+                        <p>
+                            {{sectionElevenVideoCard.paragraph}}
+                        </p>
+                        <div class='text-right'>
+                            <a href='post-detail.html' class='btn btn-link'>{{sectionElevenVideoCard.footerDescription}}</a>
+                        </div>
+                    </div>
+                </div>
+                <!--/.item-->
+            </div>
+        </div>
+    </div>
+
+</section>
+<!--/ Journal-->

@@ -1,0 +1,26 @@
+
+
+
+
+<div id='home' class="hero heroFullscreen " parallax speed='10' [src]="sectionOneImage" [style.height.px]="920" >
+<!--<section id='home' class="hero heroFullscreen bg-parallax" data-jarallax='{"speed": 0.2}' [style.height.px]="1000" [style.background]="'url('+sectionOneImage+')'">-->
+    <div class='hero-overlay'></div>
+    <div class="d-flex align-items-center">
+        <div class="scroll-to hero-mouse"><a data-scroll="" href="#about"><i class="ti-angle-down"></i></a></div>
+        <div class="container">
+            <div class="row">
+                <div class=" col-md-8  offset-md-2 text-center">
+                    <div class="tlt hero-tlt">
+                        <ul class="texts mb0">
+                            <li *ngFor="let item of sectionOneList" data-out-effect="fadeOut" data-in-effect="fadeIn">{{item}}</li>
+                        </ul>
+                    </div>
+                    <div class="buttons">
+                        <a data-scroll href="#about" class="btn btn-white-outline btn-lg">{{sectionOneButtonOne}}</a>
+                        <a data-scroll href="#folio" class="btn btn-primary btn-lg">{{sectionOneButtonTwo}}</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

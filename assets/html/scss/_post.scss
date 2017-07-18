@@ -1,0 +1,106 @@
+/*
+Journal post
+*/
+.post{
+    a{
+        text-transform: uppercase;
+        color: #999;
+        &:hover{
+            color:#666; 
+        }
+    }
+}
+.post-cat{
+    text-align: center;
+    margin-bottom:15px;
+    a{
+        font-size: .8rem;
+    }
+}
+.post-title{
+    text-align: center;
+    a{
+        text-transform: capitalize;
+        color: #333;
+        &:hover{
+            color: #999;
+        }
+    }
+}
+
+.post-meta{
+    text-align: center;
+    span{
+        display: inline-block;
+        font-size:.7rem;
+        &+span{
+            margin-left:5px;
+        }
+    }
+    h4 a{
+        
+    }
+}
+.post-footer{
+    a{
+        i{
+            display: inline-block;
+            margin-right: 8px;
+            width: 32px;
+            height: 32px;
+            line-height: 32px;
+            text-align: center;
+            border-radius: 50%;
+            background: rgba(#000,.2);
+            color: #fff;
+        }
+    }
+}
+.post-thumb{
+    background: $primary-color;
+    img{
+        transition: all .3s;
+        -webkit-transition: all .3s;
+    }
+    &:hover{
+        img{
+            opacity: .7;
+        }
+    }
+}
+.widget-title{
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 0;
+}
+.widget-item{
+    ul{
+        li{
+            padding: 3px 0;
+        }
+    }
+}
+.widget-item .media-body h5{
+    font-weight: 500;
+}
+.post-category{
+    position:relative;
+    padding-left:20px;
+    &:before{
+        content: "\e608";
+        font-family: 'themify';
+        position: absolute;
+        left:0;
+         color:#eee;
+    }
+    li{
+        a{
+            text-transform: uppercase;
+             color:#eee;
+            font-size: .7rem;
+            &:hover{
+                color: $primary-color;
+            }
+        }
+    }
+}
